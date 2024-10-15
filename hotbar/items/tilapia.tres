@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HotbarItem" load_steps=3 format=3 uid="uid://bh341w0im6nrx"]
+
+[ext_resource type="Script" path="res://hotbar/hotbar_item.gd" id="1_2ll1h"]
+[ext_resource type="Texture2D" uid="uid://ifukc50jdnnq" path="res://art/items/Nila.png" id="2_rcilp"]
+
+[resource]
+script = ExtResource("1_2ll1h")
+name = "Tilapia"
+texture = ExtResource("2_rcilp")

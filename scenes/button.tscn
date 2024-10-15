@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bspemlu0yr8xm"]
+
+[ext_resource type="Script" path="res://scripts/button.gd" id="1_jttsb"]
+
+[node name="Button" type="Button"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_right = 8.0
+offset_bottom = 4.0
+grow_vertical = 2
+script = ExtResource("1_jttsb")

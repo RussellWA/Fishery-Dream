@@ -1,0 +1,134 @@
+[gd_scene load_steps=10 format=3 uid="uid://nve3d6lx23wi"]
+
+[ext_resource type="Texture2D" uid="uid://htbxmhicwg6p" path="res://art/inventory/InventoryRect.png" id="1_kyj68"]
+[ext_resource type="Script" path="res://scenes/shop.gd" id="1_we4q8"]
+[ext_resource type="Texture2D" uid="uid://6wiy82ihquag" path="res://art/inventory/inventorySlot.png" id="2_hkul2"]
+[ext_resource type="PackedScene" uid="uid://croxloqmvb5jk" path="res://gui/shop_slot_gui.tscn" id="2_nbrv7"]
+[ext_resource type="FontFile" uid="uid://chmcl5ak4qe8q" path="res://font/nokiafc22.ttf" id="5_b7bmw"]
+[ext_resource type="FontFile" uid="uid://dvhtybg3s6k2g" path="res://font/8-bit-hud.ttf" id="5_nihg8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wtmuk"]
+font = ExtResource("5_nihg8")
+font_size = 10
+
+[sub_resource type="SystemFont" id="SystemFont_m1mqi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wkq1l"]
+font = ExtResource("5_b7bmw")
+font_size = 7
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_we4q8")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_top = 36.0
+offset_right = 157.0
+offset_bottom = 122.0
+texture = ExtResource("1_kyj68")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -33.0
+offset_right = 77.0
+offset_bottom = 35.0
+grow_vertical = 2
+columns = 3
+
+[node name="Shop Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+layout_mode = 2
+
+[node name="Shop Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+layout_mode = 2
+
+[node name="Shop Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+layout_mode = 2
+
+[node name="Shop Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+layout_mode = 2
+
+[node name="Shop Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+layout_mode = 2
+
+[node name="Shop Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+layout_mode = 2
+
+[node name="Shop Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+layout_mode = 2
+
+[node name="Sign" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 39.0
+offset_right = 114.0
+offset_bottom = 26.0
+
+[node name="background" type="Sprite2D" parent="Sign"]
+position = Vector2(37.6053, 12.5)
+scale = Vector2(3.73947, 1.25)
+texture = ExtResource("2_hkul2")
+vframes = 2
+frame = 1
+
+[node name="Label" type="Label" parent="Sign"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 19.0
+text = "SHOP"
+label_settings = SubResource("LabelSettings_wtmuk")
+
+[node name="Info" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 84.0
+offset_top = 46.0
+offset_right = 147.0
+offset_bottom = 114.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Info"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -1.0
+offset_right = 56.0
+offset_bottom = 29.0
+texture = ExtResource("1_kyj68")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="item" type="Sprite2D" parent="Info/NinePatchRect"]
+position = Vector2(23, 15)
+
+[node name="name" type="Label" parent="Info"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 60.0
+offset_bottom = 42.0
+theme_override_fonts/font = SubResource("SystemFont_m1mqi")
+label_settings = SubResource("LabelSettings_wkq1l")
+horizontal_alignment = 1
+
+[node name="Buy" type="Button" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 103.0
+offset_right = 136.0
+offset_bottom = 114.0

@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Hotbar" load_steps=12 format=3 uid="uid://c7ykxdqmpo75n"]
+
+[ext_resource type="Script" path="res://hotbar/hotbar.gd" id="1_mst10"]
+[ext_resource type="Script" path="res://hotbar/hotbar_slot.gd" id="2_dehsq"]
+
+[sub_resource type="Resource" id="Resource_818nu"]
+script = ExtResource("2_dehsq")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_s5dwp"]
+script = ExtResource("2_dehsq")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_8jf4k"]
+script = ExtResource("2_dehsq")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_bv4lq"]
+script = ExtResource("2_dehsq")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_qstw0"]
+script = ExtResource("2_dehsq")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_hq5ng"]
+script = ExtResource("2_dehsq")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_rhb2f"]
+script = ExtResource("2_dehsq")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_jdfle"]
+script = ExtResource("2_dehsq")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_tqw75"]
+script = ExtResource("2_dehsq")
+amount = 0
+
+[resource]
+script = ExtResource("1_mst10")
+slots = Array[ExtResource("2_dehsq")]([SubResource("Resource_818nu"), SubResource("Resource_s5dwp"), SubResource("Resource_8jf4k"), SubResource("Resource_bv4lq"), SubResource("Resource_qstw0"), SubResource("Resource_hq5ng"), SubResource("Resource_rhb2f"), SubResource("Resource_jdfle"), SubResource("Resource_tqw75")])
+hotbar_path = "res://hotbar/player_hotbar.tres"

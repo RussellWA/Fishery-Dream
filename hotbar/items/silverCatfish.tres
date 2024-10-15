@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HotbarItem" load_steps=3 format=3 uid="uid://c7gng2fscvtbi"]
+
+[ext_resource type="Script" path="res://hotbar/hotbar_item.gd" id="1_xj22o"]
+[ext_resource type="Texture2D" uid="uid://nlsdv6s77f" path="res://art/items/Patin.png" id="2_i8bh3"]
+
+[resource]
+script = ExtResource("1_xj22o")
+name = "silverCatfish"
+texture = ExtResource("2_i8bh3")
