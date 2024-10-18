@@ -28,15 +28,15 @@ func insert(item: HotbarItem):
 		if !emptySlots.is_empty():
 			emptySlots[0].item = item
 			emptySlots[0].amount = 1
-	save_hotbar()
+	#save_hotbar()
 	updated.emit()
 
-func save_hotbar():
-	var result = ResourceSaver.save(load(hotbar_path))
-	if result == OK:
-		print("Hotbar saved successfully.")
-	else:
-		print("Failed to save hotbar.")
+#func save_hotbar():
+	#var result = ResourceSaver.save(load(hotbar_path))
+	#if result == OK:
+		#print("Hotbar saved successfully.")
+	#else:
+		#print("Failed to save hotbar.")
 
 func removeItemAtIndex(index: int):
 	slots[index] = HotbarSlot.new()
@@ -44,5 +44,4 @@ func removeItemAtIndex(index: int):
 func insertSlot(index: int, hotbarSlot: HotbarSlot):
 	var oldIndex: int = slots.find(hotbarSlot)
 	removeItemAtIndex(oldIndex)
-	
 	slots[index] = hotbarSlot

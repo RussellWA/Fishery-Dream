@@ -1,0 +1,13 @@
+res://scenes/world.tscn
+res://hotbar/player_hotbar.tres
+res://hotbar/hotbar.gd
+res://scenes/shop.gd
+res://scripts/ShopButton.gd
+res://scripts/world.gd
+res://scripts/shop_button.gd
+res://scripts/hotbar_gui.gd
+res://scripts/button.gd
+res://scripts/shop.gd
+res://gui/hotbar_gui.tscn
+res://gui/slot_gui.tscn
+res://gui/slot_gui.gd

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://hotbar/hotbar.gd" id="1_mst10"]
 [ext_resource type="Script" path="res://hotbar/hotbar_slot.gd" id="2_dehsq"]
 
-[sub_resource type="Resource" id="Resource_818nu"]
+[sub_resource type="Resource" id="Resource_1tg27"]
 script = ExtResource("2_dehsq")
 amount = 0
 
@@ -41,5 +41,5 @@ amount = 0
 
 [resource]
 script = ExtResource("1_mst10")
-slots = Array[ExtResource("2_dehsq")]([SubResource("Resource_818nu"), SubResource("Resource_s5dwp"), SubResource("Resource_8jf4k"), SubResource("Resource_bv4lq"), SubResource("Resource_qstw0"), SubResource("Resource_hq5ng"), SubResource("Resource_rhb2f"), SubResource("Resource_jdfle"), SubResource("Resource_tqw75")])
+slots = Array[ExtResource("2_dehsq")]([SubResource("Resource_1tg27"), SubResource("Resource_s5dwp"), SubResource("Resource_8jf4k"), SubResource("Resource_bv4lq"), SubResource("Resource_qstw0"), SubResource("Resource_hq5ng"), SubResource("Resource_rhb2f"), SubResource("Resource_jdfle"), SubResource("Resource_tqw75")])
 hotbar_path = "res://hotbar/player_hotbar.tres"

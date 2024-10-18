@@ -6,7 +6,7 @@ signal updated
 @onready var itemGuiClass = preload("res://gui/item_gui.tscn")
 @onready var slots: Array = $NinePatchRect/HBoxContainer.get_children()
 
-var takenItem: ItemGui
+var holdedItem: ItemGui
 
 func _ready():
 	connectSlots()
@@ -37,31 +37,40 @@ func update():
 		itemGui.update()
 
 func onSlotClicked(slot):
-	if slot.isEmpty() && takenItem:
+	if slot.isEmpty() && holdedItem:
 		insertItemToSlot(slot)
 		return
 	
-	if !takenItem && slot.isEmpty():
+	if !holdedItem && slot.isEmpty():
 		return
 	
-	if !takenItem:
+	if !holdedItem:
 		takeItemFromSlot(slot)
+		
+	if holdedItem && !slot.isEmpty():
+		swapItems(slot)
 	
-	
-func takeItemFromSlot(slot):
-	takenItem = slot.takeItem()
-	add_child(takenItem)
-	updateTakenItem()
+func takeItemFromSlot(slot): 
+	holdedItem = slot.takeItem()
+	add_child(holdedItem)
+	updateHoldedItem()
 
 func insertItemToSlot(slot):
-	var item = takenItem
-	remove_child(takenItem)
-	takenItem = null
+	var item = holdedItem
+	remove_child(holdedItem)
+	holdedItem = null
 	slot.insert(item)
 
-func updateTakenItem():
-	if !takenItem: return
-	takenItem.global_position = get_global_mouse_position() - takenItem.size / 2
-	
+func updateHoldedItem():
+	if !holdedItem: return
+	holdedItem.global_position = get_global_mouse_position() - holdedItem.size / 2
+
+func swapItems(slot):
+	var tempItem = slot.takeItem()
+	insertItemToSlot(slot)
+	holdedItem = tempItem
+	add_child(holdedItem)
+	updateHoldedItem()
+
 func _input(event):
-	updateTakenItem()
+	updateHoldedItem()
