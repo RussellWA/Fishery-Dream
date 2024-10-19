@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cp32dwbmbcsru" path="res://art/inventory/Shop_Sign.png" id="4_ugpkl"]
 [ext_resource type="FontFile" uid="uid://chmcl5ak4qe8q" path="res://font/nokiafc22.ttf" id="5_b7bmw"]
 
-
 [sub_resource type="SystemFont" id="SystemFont_m1mqi"]
 subpixel_positioning = 0
 
@@ -122,4 +121,4 @@ offset_right = 129.0
 offset_bottom = 114.0
 theme_override_fonts/font = ExtResource("5_b7bmw")
 theme_override_font_sizes/font_size = 6
-text = "price"
+text = "Price"

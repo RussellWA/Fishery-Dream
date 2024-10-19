@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729261457
+::res://::1729355255
 ::res://art/::1729260571
 ::res://art/character/::1729260617
 New Chara Sprite Walk.png::CompressedTexture2D::7781607556664167137::1729260571::1729260617::1::::<><>::
@@ -21,15 +21,15 @@ grasssss.png::CompressedTexture2D::1482379431159371351::1729260571::1729260617::
 ::res://font/::1729260617
 8-bit-hud.ttf::FontFile::8648874956762335452::1729260571::1729260617::1::::<><>::
 nokiafc22.ttf::FontFile::5289078459813879826::1729260571::1729260617::1::::<><>::
-::res://gui/::1729260571
-hotbar_gui.tscn::PackedScene::8901531233085749809::1729260571::0::1::::<><>::res://scripts/hotbar_gui.gd<>uid://htbxmhicwg6p::::res://art/inventory/InventoryRect.png<>uid://y7ns0r820gy3::::res://gui/slot_gui.tscn
+::res://gui/::1729264148
+hotbar_gui.tscn::PackedScene::8901531233085749809::1729263863::0::1::::<><>::res://scripts/hotbar_gui.gd<>uid://htbxmhicwg6p::::res://art/inventory/InventoryRect.png<>uid://y7ns0r820gy3::::res://gui/slot_gui.tscn
 item_gui.gd::GDScript::-1::1729260571::0::1::::ItemGui<>Panel<>::
 item_gui.tscn::PackedScene::6813670088119614231::1729260571::0::1::::<><>::res://gui/item_gui.gd
 shop_slot_gui.tscn::PackedScene::5996369892973307148::1729260571::0::1::::<><>::uid://6wiy82ihquag::::res://art/inventory/inventorySlot.png
-slot_gui.gd::GDScript::-1::1729260571::0::1::::<>Button<>::
-slot_gui.tscn::PackedScene::1751415141520811324::1729260571::0::1::::<><>::uid://6wiy82ihquag::::res://art/inventory/inventorySlot.png<>res://gui/slot_gui.gd
-::res://hotbar/::1729260691
-hotbar.gd::GDScript::-1::1729260691::0::1::::Hotbar<>Resource<>::
+slot_gui.gd::GDScript::-1::1729263697::0::1::::<>Button<>::
+slot_gui.tscn::PackedScene::1751415141520811324::1729264148::0::1::::<><>::uid://6wiy82ihquag::::res://art/inventory/inventorySlot.png<>res://gui/slot_gui.gd
+::res://hotbar/::1729262334
+hotbar.gd::GDScript::-1::1729262334::0::1::::Hotbar<>Resource<>::
 hotbar_item.gd::GDScript::-1::1729260571::0::1::::HotbarItem<>Resource<>::
 hotbar_slot.gd::GDScript::-1::1729260571::0::1::::HotbarSlot<>Resource<>::
 player_hotbar.tres::Resource/Hotbar::7069077855940929769::1729260691::0::1::::<><>::res://hotbar/hotbar.gd<>res://hotbar/hotbar_slot.gd
@@ -41,14 +41,14 @@ pomfret.tres::Resource/Resource::7522873935864365440::1729260571::0::1::::<><>::
 silverCatfish.tres::Resource/Resource::7032072092672824126::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://nlsdv6s77f::::res://art/items/Patin.png
 snakeHead.tres::Resource/Resource::3350274667458843675::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://3hjj5cnrjbhi::::res://art/items/Gabus.png
 tilapia.tres::Resource/Resource::2937353584219323269::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://ifukc50jdnnq::::res://art/items/Nila.png
-::res://scenes/::1729261457
+::res://scenes/::1729263863
 player.tscn::PackedScene::2743382618098861392::1729260571::0::1::::<><>::res://scripts/player.gd<>uid://di4p67eebu6m4::::res://art/character/New Chara Sprite Walk.png
 shop.tscn::PackedScene::956099976320686284::1729261457::0::1::::<><>::uid://htbxmhicwg6p::::res://art/inventory/InventoryRect.png<>res://scripts/shop.gd<>uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn<>uid://cp32dwbmbcsru::::res://art/inventory/Shop_Sign.png<>uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf
-world.tscn::PackedScene::4898247583242386278::1729261465::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>res://scripts/ShopButton.gd<>uid://nve3d6lx23wi::::res://scenes/shop.tscn
-::res://scripts/::1729261457
-button.gd::GDScript::-1::1729260571::0::1::::<>Button<>::
-hotbar_gui.gd::GDScript::-1::1729260571::0::1::::<>Control<>::
+world.tscn::PackedScene::4898247583242386278::1729263863::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>res://scripts/shop_button.gd<>uid://nve3d6lx23wi::::res://scenes/shop.tscn
+::res://scripts/::1729263832
+button.gd::GDScript::-1::1729262334::0::1::::<>Button<>::
+hotbar_gui.gd::GDScript::-1::1729263832::0::1::::<>Control<>::
 player.gd::GDScript::-1::1729260571::0::1::::<>CharacterBody2D<>::
-shop.gd::GDScript::-1::1729261410::0::1::::Shop<>Control<>::
-ShopButton.gd::GDScript::-1::1729261431::0::1::::<>Button<>::
-world.gd::GDScript::-1::1729261452::0::1::::<>Node2D<>::
+shop.gd::GDScript::-1::1729262334::0::1::::Shop<>Control<>::
+shop_button.gd::GDScript::-1::1729262335::0::1::::<>Button<>::
+world.gd::GDScript::-1::1729262335::0::1::::<>Node2D<>::
