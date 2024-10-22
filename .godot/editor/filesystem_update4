@@ -1,2 +1,7 @@
-res://scenes/shop.tscn
+res://gui/slot_gui.tscn
 res://hotbar/player_hotbar.tres
+res://scenes/world.tscn
+res://gui/hotbar_gui.tscn
+res://scenes/shop.tscn
+res://scenes/shop_button.tscn
+res://gui/shop_slot_gui.tscn

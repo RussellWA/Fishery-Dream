@@ -1,13 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://cb10ol5mymmvm"]
+[gd_scene load_steps=16 format=3 uid="uid://cb10ol5mymmvm"]
 
 [ext_resource type="PackedScene" uid="uid://bfc6d1hc3y7ro" path="res://scenes/player.tscn" id="1_e3m6d"]
 [ext_resource type="Texture2D" uid="uid://e47hfx4sbv84" path="res://art/tileset/grass and dirt.png" id="1_hd8dm"]
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_rdsu0"]
 [ext_resource type="Texture2D" uid="uid://vectp8svax6n" path="res://art/tileset/grasssss.png" id="3_ppx1y"]
+[ext_resource type="Texture2D" uid="uid://c0p75gv0mw0l2" path="res://art/shop/gold.png" id="5_0u203"]
 [ext_resource type="FontFile" uid="uid://dvhtybg3s6k2g" path="res://font/8-bit-hud.ttf" id="5_41f18"]
 [ext_resource type="PackedScene" uid="uid://dy276ihu86qi0" path="res://gui/hotbar_gui.tscn" id="6_8n3iq"]
-[ext_resource type="Script" path="res://scripts/shop_button.gd" id="7_5ogih"]
 [ext_resource type="PackedScene" uid="uid://nve3d6lx23wi" path="res://scenes/shop.tscn" id="7_o6b0d"]
+[ext_resource type="PackedScene" uid="uid://lrywhla652aw" path="res://scenes/shop_button.tscn" id="9_y7i6x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqmqa"]
 texture = ExtResource("1_hd8dm")
@@ -81,10 +82,15 @@ position = Vector2(221, 95)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
 
+[node name="Gold" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(11, 10)
+scale = Vector2(0.8125, 0.8125)
+texture = ExtResource("5_0u203")
+
 [node name="Money" type="Label" parent="CanvasLayer"]
-offset_left = 6.0
+offset_left = 21.0
 offset_top = 5.0
-offset_right = 46.0
+offset_right = 61.0
 offset_bottom = 28.0
 label_settings = SubResource("LabelSettings_hltyq")
 
@@ -106,17 +112,15 @@ offset_top = -79.0
 offset_right = 78.5
 offset_bottom = 43.0
 
-[node name="ShopButton" type="Button" parent="CanvasLayer"]
+[node name="ShopButton" parent="CanvasLayer" instance=ExtResource("9_y7i6x")]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -60.0
-offset_top = -15.5
+offset_left = -33.0
+offset_top = 17.0
 offset_right = -13.0
-offset_bottom = 15.5
+offset_bottom = 37.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "Shop"
-script = ExtResource("7_5ogih")

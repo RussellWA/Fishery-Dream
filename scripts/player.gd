@@ -23,9 +23,8 @@ func spend_money(amount: int):
 		return false
 
 func update_money_label():
-	money_label.text = "Money: " + str(money)
+	money_label.text = str(money)
 	
-
 func _physics_process(delta):
 	player_movement(delta)
 	

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://croxloqmvb5jk"]
 
-[ext_resource type="Texture2D" uid="uid://6wiy82ihquag" path="res://art/inventory/inventorySlot.png" id="1_ybxuu"]
+[ext_resource type="Texture2D" uid="uid://cykvfw6uvvf76" path="res://art/inventory/slots_double.png" id="1_wft5u"]
 
 [sub_resource type="GDScript" id="GDScript_vosy8"]
 script/source = "extends Button
@@ -15,9 +15,8 @@ script = SubResource("GDScript_vosy8")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(10, 10)
-texture = ExtResource("1_ybxuu")
-vframes = 2
-frame = 1
+texture = ExtResource("1_wft5u")
+hframes = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 custom_minimum_size = Vector2(15, 15)

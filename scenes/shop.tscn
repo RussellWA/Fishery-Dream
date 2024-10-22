@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://nve3d6lx23wi"]
 
-[ext_resource type="Texture2D" uid="uid://htbxmhicwg6p" path="res://art/inventory/InventoryRect.png" id="1_kyj68"]
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_we4q8"]
+[ext_resource type="Texture2D" uid="uid://1xysr7da5t77" path="res://art/inventory/ui1.png" id="2_3vj1p"]
 [ext_resource type="PackedScene" uid="uid://croxloqmvb5jk" path="res://gui/shop_slot_gui.tscn" id="2_nbrv7"]
 [ext_resource type="Texture2D" uid="uid://cp32dwbmbcsru" path="res://art/inventory/Shop_Sign.png" id="4_ugpkl"]
 [ext_resource type="FontFile" uid="uid://chmcl5ak4qe8q" path="res://font/nokiafc22.ttf" id="5_b7bmw"]
@@ -27,7 +27,7 @@ layout_mode = 0
 offset_top = 36.0
 offset_right = 157.0
 offset_bottom = 122.0
-texture = ExtResource("1_kyj68")
+texture = ExtResource("2_3vj1p")
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
@@ -94,7 +94,7 @@ offset_left = 8.0
 offset_top = -1.0
 offset_right = 56.0
 offset_bottom = 29.0
-texture = ExtResource("1_kyj68")
+texture = ExtResource("2_3vj1p")
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
