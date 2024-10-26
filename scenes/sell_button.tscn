@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://w6g1tcxepluu"]
+
+[ext_resource type="Script" path="res://scripts/shop_button.gd" id="1_qjokm"]
+[ext_resource type="Texture2D" uid="uid://ioyxhkwfstse" path="res://art/shop/shop button1.png" id="2_6k3ad"]
+
+[node name="SellButton" type="Button"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Sell"
+script = ExtResource("1_qjokm")
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(10, 10)
+texture = ExtResource("2_6k3ad")

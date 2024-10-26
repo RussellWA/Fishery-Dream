@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://2v22x8ttpy54"]
+
+[ext_resource type="Texture2D" uid="uid://1xysr7da5t77" path="res://art/inventory/ui1.png" id="1_uep8h"]
+[ext_resource type="PackedScene" uid="uid://croxloqmvb5jk" path="res://gui/shop_slot_gui.tscn" id="2_ar5th"]
+[ext_resource type="Texture2D" uid="uid://cp32dwbmbcsru" path="res://art/inventory/Shop_Sign.png" id="3_7o5ht"]
+
+[node name="Sell" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_top = 29.0
+offset_right = 85.0
+offset_bottom = 115.0
+texture = ExtResource("1_uep8h")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -33.0
+offset_right = 77.0
+offset_bottom = 35.0
+grow_vertical = 2
+columns = 3
+
+[node name="Shop Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_ar5th")]
+layout_mode = 2
+
+[node name="Shop Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_ar5th")]
+layout_mode = 2
+
+[node name="Shop Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_ar5th")]
+layout_mode = 2
+
+[node name="Shop Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_ar5th")]
+layout_mode = 2
+
+[node name="Shop Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_ar5th")]
+layout_mode = 2
+
+[node name="Shop Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_ar5th")]
+layout_mode = 2
+
+[node name="Shop Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_ar5th")]
+layout_mode = 2
+
+[node name="Shop Slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_ar5th")]
+layout_mode = 2
+
+[node name="Shop Slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_ar5th")]
+layout_mode = 2
+
+[node name="Sign" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 8.0
+offset_right = 76.0
+offset_bottom = 22.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sign"]
+position = Vector2(34, 11)
+scale = Vector2(0.766667, 0.766667)
+texture = ExtResource("3_7o5ht")

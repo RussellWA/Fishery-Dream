@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cb10ol5mymmvm"]
+[gd_scene load_steps=19 format=3 uid="uid://cb10ol5mymmvm"]
 
 [ext_resource type="PackedScene" uid="uid://bfc6d1hc3y7ro" path="res://scenes/player.tscn" id="1_e3m6d"]
 [ext_resource type="Texture2D" uid="uid://e47hfx4sbv84" path="res://art/tileset/grass and dirt.png" id="1_hd8dm"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dy276ihu86qi0" path="res://gui/hotbar_gui.tscn" id="6_8n3iq"]
 [ext_resource type="PackedScene" uid="uid://nve3d6lx23wi" path="res://scenes/shop.tscn" id="7_o6b0d"]
 [ext_resource type="PackedScene" uid="uid://lrywhla652aw" path="res://scenes/shop_button.tscn" id="9_y7i6x"]
+[ext_resource type="Script" path="res://time/time_system.gd" id="10_cfupt"]
+[ext_resource type="Script" path="res://time/date_time.gd" id="11_2no0j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqmqa"]
 texture = ExtResource("1_hd8dm")
@@ -59,6 +61,13 @@ sources/2 = SubResource("TileSetAtlasSource_ymk44")
 [sub_resource type="LabelSettings" id="LabelSettings_hltyq"]
 font = ExtResource("5_41f18")
 font_size = 6
+
+[sub_resource type="Resource" id="Resource_2jrq5"]
+script = ExtResource("11_2no0j")
+seconds = 0
+minutes = 0
+hours = 6
+days = 1
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_rdsu0")
@@ -124,3 +133,16 @@ offset_right = -13.0
 offset_bottom = 37.0
 grow_horizontal = 0
 grow_vertical = 2
+
+[node name="Time" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "? AM"
+
+[node name="TimeSystem" type="Node" parent="."]
+script = ExtResource("10_cfupt")
+date_time = SubResource("Resource_2jrq5")

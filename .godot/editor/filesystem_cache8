@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729615532
-::res://art/::1729612315
+::res://::1729949870
+::res://art/::1729946843
 ::res://art/character/::1729260617
 New Chara Sprite Walk.png::CompressedTexture2D::7781607556664167137::1729260571::1729260617::1::::<><>::
 ::res://art/inventory/::1729615537
@@ -19,6 +19,8 @@ Gurame.png::CompressedTexture2D::8008578058981665318::1729260571::1729260617::1:
 lele.png::CompressedTexture2D::4374204311397395623::1729260571::1729260617::1::::<><>::
 Nila.png::CompressedTexture2D::573064988207814982::1729260571::1729260617::1::::<><>::
 Patin.png::CompressedTexture2D::809915689949605::1729260571::1729260617::1::::<><>::
+::res://art/objects/::1729946843
+chest_01.png::CompressedTexture2D::7523177538032297859::1729946821::1729946843::1::::<><>::
 ::res://art/shop/::1729612325
 gold.png::CompressedTexture2D::6560524990967391301::1729610458::1729612315::1::::<><>::
 shop button1.png::CompressedTexture2D::591910702865789908::1729610458::1729612315::1::::<><>::
@@ -32,18 +34,18 @@ grasssss.png::CompressedTexture2D::1482379431159371351::1729260571::1729260617::
 ::res://font/::1729260617
 8-bit-hud.ttf::FontFile::8648874956762335452::1729260571::1729260617::1::::<><>::
 nokiafc22.ttf::FontFile::5289078459813879826::1729260571::1729260617::1::::<><>::
-::res://gui/::1729612571
-hotbar_gui.tscn::PackedScene::8901531233085749809::1729612571::0::1::::<><>::res://scripts/hotbar_gui.gd<>uid://1xysr7da5t77::::res://art/inventory/ui1.png<>uid://y7ns0r820gy3::::res://gui/slot_gui.tscn
+::res://gui/::1729950042
+hotbar_gui.tscn::PackedScene::8901531233085749809::1729950042::0::1::::<><>::res://scripts/hotbar_gui.gd<>uid://1xysr7da5t77::::res://art/inventory/ui1.png<>uid://y7ns0r820gy3::::res://gui/slot_gui.tscn
 item_gui.gd::GDScript::-1::1729260571::0::1::::ItemGui<>Panel<>::
-item_gui.tscn::PackedScene::6813670088119614231::1729260571::0::1::::<><>::res://gui/item_gui.gd
-shop_slot_gui.tscn::PackedScene::5996369892973307148::1729260571::0::1::::<><>::uid://6wiy82ihquag::::res://art/inventory/inventorySlot.png
+item_gui.tscn::PackedScene::6813670088119614231::1729950042::0::1::::<><>::res://gui/item_gui.gd
+shop_slot_gui.tscn::PackedScene::5996369892973307148::1729950042::0::1::::<><>::uid://cykvfw6uvvf76::::res://art/inventory/slots_double.png
 slot_gui.gd::GDScript::-1::1729263697::0::1::::<>Button<>::
-slot_gui.tscn::PackedScene::1751415141520811324::1729612571::0::1::::<><>::uid://6wiy82ihquag::::res://art/inventory/inventorySlot.png<>res://gui/slot_gui.gd
-::res://hotbar/::1729610049
+slot_gui.tscn::PackedScene::1751415141520811324::1729950042::0::1::::<><>::res://gui/slot_gui.gd<>uid://cykvfw6uvvf76::::res://art/inventory/slots_double.png
+::res://hotbar/::1729946514
 hotbar.gd::GDScript::-1::1729262334::0::1::::Hotbar<>Resource<>::
 hotbar_item.gd::GDScript::-1::1729260571::0::1::::HotbarItem<>Resource<>::
 hotbar_slot.gd::GDScript::-1::1729260571::0::1::::HotbarSlot<>Resource<>::
-player_hotbar.tres::Resource/Hotbar::7069077855940929769::1729610049::0::1::::<><>::res://hotbar/hotbar.gd<>res://hotbar/hotbar_slot.gd
+player_hotbar.tres::Resource/Hotbar::7069077855940929769::1729946514::0::1::::<><>::res://hotbar/hotbar.gd<>res://hotbar/hotbar_slot.gd
 ::res://hotbar/items/::1729260571
 belida.tres::Resource/Resource::2938564178707433012::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://dtptntq7q0q54::::res://art/items/Belida.png
 catfish.tres::Resource/Resource::5703115948203599336::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://b3k5rg4b04aj4::::res://art/items/lele.png
@@ -52,15 +54,22 @@ pomfret.tres::Resource/Resource::7522873935864365440::1729260571::0::1::::<><>::
 silverCatfish.tres::Resource/Resource::7032072092672824126::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://nlsdv6s77f::::res://art/items/Patin.png
 snakeHead.tres::Resource/Resource::3350274667458843675::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://3hjj5cnrjbhi::::res://art/items/Gabus.png
 tilapia.tres::Resource/Resource::2937353584219323269::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://ifukc50jdnnq::::res://art/items/Nila.png
-::res://scenes/::1729615508
+::res://scenes/::1729950118
 player.tscn::PackedScene::2743382618098861392::1729260571::0::1::::<><>::res://scripts/player.gd<>uid://di4p67eebu6m4::::res://art/character/New Chara Sprite Walk.png
-shop.tscn::PackedScene::956099976320686284::1729615508::0::1::::<><>::res://scripts/shop.gd<>uid://1xysr7da5t77::::res://art/inventory/ui1.png<>uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn<>uid://cp32dwbmbcsru::::res://art/inventory/Shop_Sign.png<>uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf
-shop_button.tscn::PackedScene::808668581828611618::1729612571::0::1::::<><>::res://scripts/shop_button.gd<>uid://ioyxhkwfstse::::res://art/shop/shop button1.png
-world.tscn::PackedScene::4898247583242386278::1729612571::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://c0p75gv0mw0l2::::res://art/shop/gold.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>uid://nve3d6lx23wi::::res://scenes/shop.tscn<>uid://lrywhla652aw::::res://scenes/shop_button.tscn
-::res://scripts/::1729612154
+directional_light.gd::GDScript::-1::1729950209::0::1::::<>DirectionalLight2D<>::
+sell.tscn::PackedScene::1940139546207137217::1729950042::0::1::::<><>::uid://1xysr7da5t77::::res://art/inventory/ui1.png<>uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn<>uid://cp32dwbmbcsru::::res://art/inventory/Shop_Sign.png
+sell_button.tscn::PackedScene::1608562005094916224::1729950042::0::1::::<><>::res://scripts/shop_button.gd<>uid://ioyxhkwfstse::::res://art/shop/shop button1.png
+shop.tscn::PackedScene::956099976320686284::1729950042::0::1::::<><>::res://scripts/shop.gd<>uid://1xysr7da5t77::::res://art/inventory/ui1.png<>uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn<>uid://cp32dwbmbcsru::::res://art/inventory/Shop_Sign.png<>uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf
+shop_button.tscn::PackedScene::808668581828611618::1729950042::0::1::::<><>::res://scripts/shop_button.gd<>uid://ioyxhkwfstse::::res://art/shop/shop button1.png
+world.tscn::PackedScene::4898247583242386278::1729950118::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://c0p75gv0mw0l2::::res://art/shop/gold.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>uid://nve3d6lx23wi::::res://scenes/shop.tscn<>uid://lrywhla652aw::::res://scenes/shop_button.tscn<>res://time/time_system.gd<>res://time/date_time.gd
+::res://scripts/::1729950108
 button.gd::GDScript::-1::1729262334::0::1::::<>Button<>::
 hotbar_gui.gd::GDScript::-1::1729263832::0::1::::<>Control<>::
 player.gd::GDScript::-1::1729610897::0::1::::<>CharacterBody2D<>::
 shop.gd::GDScript::-1::1729262334::0::1::::Shop<>Control<>::
 shop_button.gd::GDScript::-1::1729612154::0::1::::<>Button<>::
-world.gd::GDScript::-1::1729262335::0::1::::<>Node2D<>::
+world.gd::GDScript::-1::1729950108::0::1::::<>Node2D<>::
+::res://time/::1729949980
+date_time.gd::GDScript::-1::1729948858::0::1::::DateTime<>Resource<>::
+night_effect.gd::GDScript::-1::1729949980::0::1::::<>ColorRect<>::
+time_system.gd::GDScript::-1::1729949602::0::1::::TimeSystem<>Node<>::
