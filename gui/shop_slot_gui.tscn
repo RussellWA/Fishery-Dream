@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://croxloqmvb5jk"]
 
-[ext_resource type="Texture2D" uid="uid://cykvfw6uvvf76" path="res://art/inventory/slots_double.png" id="1_wft5u"]
+[ext_resource type="Texture2D" uid="uid://witkqyu3sq3n" path="res://art/inventory/Slots Recolor-Sheet.png" id="1_ahj3g"]
 
 [sub_resource type="GDScript" id="GDScript_vosy8"]
 script/source = "extends Button
@@ -15,7 +15,7 @@ script = SubResource("GDScript_vosy8")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(10, 10)
-texture = ExtResource("1_wft5u")
+texture = ExtResource("1_ahj3g")
 hframes = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]

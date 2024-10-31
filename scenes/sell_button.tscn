@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://w6g1tcxepluu"]
 
 [ext_resource type="Script" path="res://scripts/shop_button.gd" id="1_qjokm"]
-[ext_resource type="Texture2D" uid="uid://ioyxhkwfstse" path="res://art/shop/shop button1.png" id="2_6k3ad"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w4r5j"]
+load_path = "res://.godot/imported/shop button1.png-074b2817bddeca297ed511a99c7411d5.ctex"
 
 [node name="SellButton" type="Button"]
 self_modulate = Color(1, 1, 1, 0)
@@ -14,4 +16,4 @@ script = ExtResource("1_qjokm")
 [node name="Icon" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(10, 10)
-texture = ExtResource("2_6k3ad")
+texture = SubResource("CompressedTexture2D_w4r5j")

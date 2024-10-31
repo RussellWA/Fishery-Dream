@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dy276ihu86qi0"]
 
 [ext_resource type="Script" path="res://scripts/hotbar_gui.gd" id="1_6ph1i"]
-[ext_resource type="Texture2D" uid="uid://1xysr7da5t77" path="res://art/inventory/ui1.png" id="2_513gu"]
+[ext_resource type="Texture2D" uid="uid://dwdi70ssgml3c" path="res://art/shop/UI Recolor.png" id="2_6f3is"]
 [ext_resource type="PackedScene" uid="uid://y7ns0r820gy3" path="res://gui/slot_gui.tscn" id="2_b1xwd"]
 
 [node name="HotbarGui" type="Control"]
@@ -21,7 +21,7 @@ script = ExtResource("1_6ph1i")
 layout_mode = 0
 offset_right = 182.0
 offset_bottom = 31.0
-texture = ExtResource("2_513gu")
+texture = ExtResource("2_6f3is")
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6

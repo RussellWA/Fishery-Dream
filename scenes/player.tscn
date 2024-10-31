@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://bfc6d1hc3y7ro"]
+[gd_scene load_steps=28 format=3 uid="uid://bfc6d1hc3y7ro"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_4gvda"]
 [ext_resource type="Texture2D" uid="uid://di4p67eebu6m4" path="res://art/character/New Chara Sprite Walk.png" id="1_f8rfr"]
+[ext_resource type="Script" path="res://interaction/interaction area/interaction.gd" id="3_0m2re"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_whslf"]
 atlas = ExtResource("1_f8rfr")
@@ -186,18 +187,29 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vf1il"]
 size = Vector2(10, 11)
 
-[node name="Player" type="CharacterBody2D"]
-z_index = 1
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wv3gx"]
+radius = 7.0
+height = 32.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
+collision_layer = 2
 script = ExtResource("1_4gvda")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_7o7es")
-animation = &"walk_up"
+animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_vf1il")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+script = ExtResource("3_0m2re")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, -15)
+shape = SubResource("CapsuleShape2D_wv3gx")

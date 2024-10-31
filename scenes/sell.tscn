@@ -1,8 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://2v22x8ttpy54"]
 
-[ext_resource type="Texture2D" uid="uid://1xysr7da5t77" path="res://art/inventory/ui1.png" id="1_uep8h"]
 [ext_resource type="PackedScene" uid="uid://croxloqmvb5jk" path="res://gui/shop_slot_gui.tscn" id="2_ar5th"]
-[ext_resource type="Texture2D" uid="uid://cp32dwbmbcsru" path="res://art/inventory/Shop_Sign.png" id="3_7o5ht"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yihj2"]
+load_path = "res://.godot/imported/ui1.png-44288f77060e7f6ec45b2748c2e9b2cd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mdxw6"]
+load_path = "res://.godot/imported/Shop_Sign.png-eb207a1424abeb39a971a1617b4690d6.ctex"
 
 [node name="Sell" type="Control"]
 layout_mode = 3
@@ -17,7 +21,7 @@ layout_mode = 0
 offset_top = 29.0
 offset_right = 85.0
 offset_bottom = 115.0
-texture = ExtResource("1_uep8h")
+texture = SubResource("CompressedTexture2D_yihj2")
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
@@ -73,4 +77,4 @@ offset_bottom = 22.0
 [node name="Sprite2D" type="Sprite2D" parent="Sign"]
 position = Vector2(34, 11)
 scale = Vector2(0.766667, 0.766667)
-texture = ExtResource("3_7o5ht")
+texture = SubResource("CompressedTexture2D_mdxw6")

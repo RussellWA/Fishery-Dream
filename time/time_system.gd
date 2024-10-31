@@ -1,7 +1,7 @@
 class_name TimeSystem extends Node
 
 @export var date_time: DateTime
-@export var ticks_pr_second: float = 3.6  # Adjusted to fit a 5-minute day
+@export var ticks_pr_second: float = 108  # Adjusted to fit a 5-minute day
 
 # New variable to control if time is running
 var time_paused: bool = false

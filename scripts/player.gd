@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var money_label: Label = $"../CanvasLayer/Money"
+@onready var interaction_area: InteractionArea = $InteractionArea
 
 const speed = 100
 var curr_direction = "none"
@@ -9,6 +10,7 @@ var money: int = 10
 
 func _ready():
 	update_money_label()
+	interaction_area.interact = Callable(self, "on_interact")
 
 func add_money(amount: int):
 	money += amount
