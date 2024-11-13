@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HotbarItem" load_steps=3 format=3 uid="uid://d2luga00iuk3m"]
+
+[ext_resource type="Script" path="res://hotbar/hotbar_item.gd" id="1_4i6mt"]
+[ext_resource type="Texture2D" uid="uid://dh5schr6cgpye" path="res://art/items/Pomfret Seed.png" id="2_vgkb2"]
+
+[resource]
+script = ExtResource("1_4i6mt")
+name = "pomfretSeed"
+texture = ExtResource("2_vgkb2")

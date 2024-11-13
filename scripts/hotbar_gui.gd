@@ -6,8 +6,12 @@ signal update_holded_item(item: ItemGui)
 @onready var hotbar: Hotbar = preload("res://hotbar/player_hotbar.tres")
 @onready var itemGuiClass = preload("res://gui/item_gui.tscn")
 @onready var slots: Array = $NinePatchRect/HBoxContainer.get_children()
+@onready var item_data = null
 
+@export var holdedItemResource: Resource
 @export var holdedItem: ItemGui
+
+var holdedSlot
 
 func _ready():
 	connectSlots()
@@ -28,6 +32,8 @@ func update():
 		if !hotbarSlot.item: 
 			continue
 		var itemGui: ItemGui = slots[i].itemGui
+		
+		print(itemGui)
 		
 		if !itemGui:
 			itemGui = itemGuiClass.instantiate()
@@ -54,14 +60,14 @@ func takeItemFromSlot(slot):
 	holdedItem = slot.takeItem()
 	add_child(holdedItem)
 	updateHoldedItem()
-	self.update_holded_item.emit(holdedItem)
+	update_holded_item.emit(holdedItem)
 
 func insertItemToSlot(slot):
 	var item = holdedItem
 	remove_child(holdedItem)
 	holdedItem = null
 	slot.insert(item)
-	self.update_holded_item.emit(null)
+	update_holded_item.emit(null)
 
 func updateHoldedItem():
 	if !holdedItem: return
@@ -76,3 +82,16 @@ func swapItems(slot):
 
 func _input(event):
 	updateHoldedItem()
+
+func _on_pool_item_resource_send(item_resource):
+	holdedItemResource = load(item_resource)
+	var itemAmount = int(holdedItem.amountLabel.text) - 1
+	holdedItem.amountLabel.text = str(itemAmount)
+	
+	if itemAmount > 0:
+		insertItemToSlot(holdedSlot)
+	else:
+		hotbar.removeSlot(holdedItemResource)
+		remove_child(holdedItem)
+		holdedItem = null
+		update_holded_item.emit(null)

@@ -16,8 +16,13 @@ func checkSlots(item: HotbarItem):
 	var emptySlots = slots.filter(func(slot): return slot.item == null)
 	if !emptySlots.is_empty():
 		return true
-
 	return false
+
+func removeSlot(item: HotbarItem):
+	var itemSlots = slots.filter(func(slot): return slot.item == item)
+	for i in range(slots.size()): 
+		if slots[i].item == item:
+			removeItemAtIndex(i)
 
 func insert(item: HotbarItem):
 	var itemSlots = slots.filter(func(slot): return slot.item == item)
@@ -28,6 +33,7 @@ func insert(item: HotbarItem):
 		if !emptySlots.is_empty():
 			emptySlots[0].item = item
 			emptySlots[0].amount = 1
+			print(emptySlots[0].item, ": ", emptySlots[0].amount)
 	updated.emit()
 
 func removeItemAtIndex(index: int):

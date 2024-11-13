@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HotbarItem" load_steps=3 format=3 uid="uid://bl0sj00ypgtqd"]
+
+[ext_resource type="Script" path="res://hotbar/hotbar_item.gd" id="1_ka7ka"]
+[ext_resource type="Texture2D" uid="uid://dpg5x4w5iyvfo" path="res://art/items/Belida Seed.png" id="2_wwg8m"]
+
+[resource]
+script = ExtResource("1_ka7ka")
+name = "belidaSeed"
+texture = ExtResource("2_wwg8m")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HotbarItem" load_steps=3 format=3 uid="uid://bno1cgv3l1a0m"]
+
+[ext_resource type="Script" path="res://hotbar/hotbar_item.gd" id="1_12cwl"]
+[ext_resource type="Texture2D" uid="uid://bk2aluj8pulrj" path="res://art/items/Gourami Seed.png" id="2_2bu1s"]
+
+[resource]
+script = ExtResource("1_12cwl")
+name = "gouramiSeed"
+texture = ExtResource("2_2bu1s")

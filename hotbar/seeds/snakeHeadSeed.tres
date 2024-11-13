@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HotbarItem" load_steps=3 format=3 uid="uid://dwv5edhxkly6i"]
+
+[ext_resource type="Script" path="res://hotbar/hotbar_item.gd" id="1_0h8co"]
+[ext_resource type="Texture2D" uid="uid://blca5c48x8co6" path="res://art/items/Snakehead Seed.png" id="2_wohrc"]
+
+[resource]
+script = ExtResource("1_0h8co")
+name = "snakeHeadSeed"
+texture = ExtResource("2_wohrc")

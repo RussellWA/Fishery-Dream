@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy276ihu86qi0"]
+
+[ext_resource type="Script" path="res://scripts/hotbar_gui.gd" id="1_6ph1i"]
+[ext_resource type="Texture2D" uid="uid://dwdi70ssgml3c" path="res://art/shop/UI Recolor.png" id="2_6f3is"]
+[ext_resource type="PackedScene" uid="uid://y7ns0r820gy3" path="res://gui/slot_gui.tscn" id="2_b1xwd"]
+
+[node name="HotbarGui" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 182.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_6ph1i")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 31.0
+texture = ExtResource("2_6f3is")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.5
+offset_top = -7.5
+offset_right = 83.5
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slot" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_b1xwd")]
+layout_mode = 2
+
+[node name="Slot2" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_b1xwd")]
+layout_mode = 2
+
+[node name="Slot3" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_b1xwd")]
+layout_mode = 2
+
+[node name="Slot4" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_b1xwd")]
+layout_mode = 2
+
+[node name="Slot5" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_b1xwd")]
+layout_mode = 2
+
+[node name="Slot6" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_b1xwd")]
+layout_mode = 2
+
+[node name="Slot7" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_b1xwd")]
+layout_mode = 2
+
+[node name="Slot8" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_b1xwd")]
+layout_mode = 2
+
+[node name="Slot9" parent="NinePatchRect/HBoxContainer" instance=ExtResource("2_b1xwd")]
+layout_mode = 2
