@@ -3,5 +3,6 @@ res://hotbar/player_hotbar.tres
 res://scenes/pool.tscn
 res://gui/hotbar_gui.tscn
 res://scenes/shop.tscn
-res://scripts/shop.gd
-res://hotbar/hotbar_item.gd
+res://scripts/pool.gd
+res://hotbar/hotbar.gd
+res://scripts/hotbar_gui.gd

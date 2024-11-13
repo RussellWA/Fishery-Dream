@@ -33,8 +33,6 @@ func update():
 			continue
 		var itemGui: ItemGui = slots[i].itemGui
 		
-		print(itemGui)
-		
 		if !itemGui:
 			itemGui = itemGuiClass.instantiate()
 			slots[i].insert(itemGui)

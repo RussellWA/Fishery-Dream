@@ -1,13 +1,13 @@
 extends StaticBody2D
 
 var items = [
-	{"name": "Catfish", "resource": "res://hotbar/items/catfish.tres", "duration": 1},
-	{"name": "Tilapia", "resource": "res://hotbar/items/tilapia.tres", "duration": 1},
-	{"name": "gourami", "resource": "res://hotbar/items/gourami.tres", "duration": 2},
-	{"name": "Pomfret", "resource": "res://hotbar/items/pomfret.tres", "duration": 2},
-	{"name": "SnakeHead", "resource": "res://hotbar/items/snakeHead.tres" , "duration": 3},
-	{"name": "SilverCatfish", "resource": "res://hotbar/items/silverCatfish.tres" , "duration": 4},
-	{"name": "Belida", "resource": "res://hotbar/items/belida.tres" , "duration": 5}
+	{"name": "Catfish", "duration": 1, "resource": "res://hotbar/items/catfish.tres", "seed": "res://hotbar/seeds/catfishSeed.tres"},
+	{"name": "Tilapia", "duration": 1, "resource": "res://hotbar/items/tilapia.tres", "seed": "res://hotbar/seeds/tilapiaSeed.tres"},
+	{"name": "gourami", "duration": 2, "resource": "res://hotbar/items/gourami.tres", "seed": "res://hotbar/seeds/gouramiSeed.tres"},
+	{"name": "Pomfret", "duration": 2, "resource": "res://hotbar/items/pomfret.tres", "seed": "res://hotbar/seeds/pomfretSeed.tres"},
+	{"name": "SnakeHead", "duration": 3, "resource": "res://hotbar/items/snakeHead.tres", "seed": "res://hotbar/seeds/snakeHeadSeed.tres"},
+	{"name": "SilverCatfish", "duration": 4, "resource": "res://hotbar/items/silverCatfish.tres", "seed": "res://hotbar/seeds/silverCatfishSeed.tres"},
+	{"name": "Belida", "duration": 5, "resource": "res://hotbar/items/belida.tres", "seed": "res://hotbar/seeds/belidaSeed.tres"}
 ]
 
 signal updated
@@ -57,19 +57,17 @@ func play_anim():
 func _on_hotbar_gui_update_holded_item(item: ItemGui):
 	if item:
 		holdedItem = item
-		print("test ", holdedItem.amountLabel)
-		print("test ", holdedItem.itemName)
 	else:
 		holdedItem = null
 
 func _on_click_area_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and isPoolEntered:
 		if holdedItem and curr_fish == "empty":
-			curr_fish = holdedItem.itemName.to_lower()
+			var extracted_string = holdedItem.itemName.to_lower().split("seed")[0]
+			curr_fish = extracted_string
 			var item_data = items.filter(func(item): return item["name"].to_lower() == curr_fish)
-			print("bruh ", item_data)
 			if item_data.size() > 0:
-				item_resource_send.emit(item_data[0]["resource"])
+				item_resource_send.emit(item_data[0]["seed"])
 				end_day = curr_day + item_data[0]["duration"]
 				play_anim()
 

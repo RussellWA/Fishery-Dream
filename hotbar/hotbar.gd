@@ -33,7 +33,6 @@ func insert(item: HotbarItem):
 		if !emptySlots.is_empty():
 			emptySlots[0].item = item
 			emptySlots[0].amount = 1
-			print(emptySlots[0].item, ": ", emptySlots[0].amount)
 	updated.emit()
 
 func removeItemAtIndex(index: int):

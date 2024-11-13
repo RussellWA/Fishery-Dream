@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1731506928
+::res://::1731508572
 ::res://art/::1729946843
 ::res://art/character/::1729260617
 New Chara Sprite Walk.png::CompressedTexture2D::7781607556664167137::1729260571::1729260617::1::::<><>::
@@ -37,16 +37,16 @@ grasssss.png::CompressedTexture2D::1482379431159371351::1729260571::1729260617::
 ::res://font/::1729260617
 8-bit-hud.ttf::FontFile::8648874956762335452::1729260571::1729260617::1::::<><>::
 nokiafc22.ttf::FontFile::5289078459813879826::1729260571::1729260617::1::::<><>::
-::res://gui/::1731506974
-hotbar_gui.tscn::PackedScene::8901531233085749809::1731506974::0::1::::<><>::res://scripts/hotbar_gui.gd<>uid://dwdi70ssgml3c::::res://art/shop/UI Recolor.png<>uid://y7ns0r820gy3::::res://gui/slot_gui.tscn
+::res://gui/::1731508421
+hotbar_gui.tscn::PackedScene::8901531233085749809::1731508421::0::1::::<><>::res://scripts/hotbar_gui.gd<>uid://dwdi70ssgml3c::::res://art/shop/UI Recolor.png<>uid://y7ns0r820gy3::::res://gui/slot_gui.tscn
 item_gui.gd::GDScript::-1::1730393090::0::1::::ItemGui<>Panel<>::
 item_gui.tscn::PackedScene::6813670088119614231::1730392930::0::1::::<><>::res://gui/item_gui.gd
 shop_slot_gui.tscn::PackedScene::5996369892973307148::1730386094::0::1::::<><>::uid://witkqyu3sq3n::::res://art/inventory/Slots Recolor-Sheet.png
 slot_gui.gd::GDScript::-1::1729263697::0::1::::<>Button<>::
 slot_gui.tscn::PackedScene::1751415141520811324::1730386094::0::1::::<><>::res://gui/slot_gui.gd<>uid://witkqyu3sq3n::::res://art/inventory/Slots Recolor-Sheet.png
-::res://hotbar/::1731506974
+::res://hotbar/::1731507215
 hotbar.gd::GDScript::-1::1731082609::0::1::::Hotbar<>Resource<>::
-hotbar_item.gd::GDScript::-1::1729260571::0::1::::HotbarItem<>Resource<>::
+hotbar_item.gd::GDScript::-1::1731507215::0::1::::HotbarItem<>Resource<>::
 hotbar_slot.gd::GDScript::-1::1730394243::0::1::::HotbarSlot<>Resource<>::
 player_hotbar.tres::Resource/Hotbar::7069077855940929769::1731506974::0::1::::<><>::res://hotbar/hotbar.gd<>res://hotbar/hotbar_slot.gd
 ::res://hotbar/items/::1729260571
@@ -57,26 +57,34 @@ pomfret.tres::Resource/Resource::7522873935864365440::1729260571::0::1::::<><>::
 silverCatfish.tres::Resource/Resource::7032072092672824126::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://nlsdv6s77f::::res://art/items/Patin.png
 snakeHead.tres::Resource/Resource::3350274667458843675::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://3hjj5cnrjbhi::::res://art/items/Gabus.png
 tilapia.tres::Resource/Resource::2937353584219323269::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://ifukc50jdnnq::::res://art/items/Nila.png
+::res://hotbar/seeds/::1731508327
+belidaSeed.tres::Resource/HotbarItem::3211217738392509647::1731507508::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://dpg5x4w5iyvfo::::res://art/items/Belida Seed.png
+catfishSeed.tres::Resource/HotbarItem::1907364232299414900::1731507240::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://cbjkqqychx52q::::res://art/items/Catfish Seed.png
+gouramiSeed.tres::Resource/HotbarItem::3329359501813004702::1731507526::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://bk2aluj8pulrj::::res://art/items/Gourami Seed.png
+pomfretSeed.tres::Resource/HotbarItem::9078294078987079020::1731508271::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://dh5schr6cgpye::::res://art/items/Pomfret Seed.png
+silverCatfishSeed.tres::Resource/HotbarItem::6743507745947883811::1731508293::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://dq6tg3qgigl8q::::res://art/items/Sliver catfish Seed.png
+snakeHeadSeed.tres::Resource/HotbarItem::8748597366352405022::1731508311::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://blca5c48x8co6::::res://art/items/Snakehead Seed.png
+tilapiaSeed.tres::Resource/HotbarItem::8958355041406687794::1731508327::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://dgqc2mvn73rxg::::res://art/items/Tilapia Seed.png
 ::res://interaction/::1730386094
 InteractionManager.gd::GDScript::-1::1730385467::0::1::::<>Node2D<>::
 InteractionManager.tscn::PackedScene::4531220641326396861::1730386094::0::1::::<><>::res://interaction/InteractionManager.gd
 ::res://interaction/interaction area/::1730817885
 interaction.gd::GDScript::-1::1730645923::0::1::::InteractionArea<>Area2D<>::
 interaction.tscn::PackedScene::7253069901762750722::1730817885::0::1::::<><>::res://interaction/interaction area/interaction.gd
-::res://scenes/::1731506974
+::res://scenes/::1731508422
 player.tscn::PackedScene::2743382618098861392::1730390161::0::1::::<><>::res://scripts/player.gd<>uid://di4p67eebu6m4::::res://art/character/New Chara Sprite Walk.png<>res://interaction/interaction area/interaction.gd
-pool.tscn::PackedScene::3686291892513235606::1731506974::0::1::::<><>::uid://0b2yp1aafic7::::res://art/objects/Pool.png<>res://scripts/pool.gd<>uid://dblpab3x2hn1s::::res://interaction/interaction area/interaction.tscn<>uid://ds04ivxt6apfx::::res://art/objects/pool with fish-Sheet.png
+pool.tscn::PackedScene::3686291892513235606::1731508421::0::1::::<><>::uid://0b2yp1aafic7::::res://art/objects/Pool.png<>res://scripts/pool.gd<>uid://dblpab3x2hn1s::::res://interaction/interaction area/interaction.tscn<>uid://ds04ivxt6apfx::::res://art/objects/pool with fish-Sheet.png
 sell.tscn::PackedScene::1940139546207137217::1730386094::0::1::::<><>::uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn
 sell_button.tscn::PackedScene::1608562005094916224::1730386094::0::1::::<><>::res://scripts/shop_button.gd
-shop.tscn::PackedScene::956099976320686284::1731507148::0::1::::<><>::res://scripts/shop.gd<>uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn<>uid://cqn4y8hogyffv::::res://art/shop/Shop UI.png<>uid://b1qim3xstfkgf::::res://art/shop/Shop Sign.png<>uid://dwdi70ssgml3c::::res://art/shop/UI Recolor.png<>uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf
+shop.tscn::PackedScene::956099976320686284::1731508422::0::1::::<><>::res://scripts/shop.gd<>uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn<>uid://cqn4y8hogyffv::::res://art/shop/Shop UI.png<>uid://b1qim3xstfkgf::::res://art/shop/Shop Sign.png<>uid://dwdi70ssgml3c::::res://art/shop/UI Recolor.png<>uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf
 shop_button.tscn::PackedScene::808668581828611618::1730386094::0::1::::<><>::res://scripts/shop_button.gd<>uid://8nfgj2td41l1::::res://art/shop/shop button recolor.png
-world.tscn::PackedScene::4898247583242386278::1731506974::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://ibuyr54rj6g1::::res://art/objects/plot and pool sheet.png<>uid://c0p75gv0mw0l2::::res://art/shop/gold.png<>uid://dfgjvt7fuhadf::::res://art/objects/chest_01.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>uid://nve3d6lx23wi::::res://scenes/shop.tscn<>uid://lrywhla652aw::::res://scenes/shop_button.tscn<>res://time/time_system.gd<>res://time/date_time.gd<>uid://bsrwxommesx8i::::res://scenes/pool.tscn
-::res://scripts/::1731081242
+world.tscn::PackedScene::4898247583242386278::1731508421::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://ibuyr54rj6g1::::res://art/objects/plot and pool sheet.png<>uid://c0p75gv0mw0l2::::res://art/shop/gold.png<>uid://dfgjvt7fuhadf::::res://art/objects/chest_01.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>uid://nve3d6lx23wi::::res://scenes/shop.tscn<>uid://lrywhla652aw::::res://scenes/shop_button.tscn<>res://time/time_system.gd<>res://time/date_time.gd<>uid://bsrwxommesx8i::::res://scenes/pool.tscn
+::res://scripts/::1731508419
 button.gd::GDScript::-1::1729262334::0::1::::<>Button<>::
 hotbar_gui.gd::GDScript::-1::1731081242::0::1::::<>Control<>::
 player.gd::GDScript::-1::1730386093::0::1::::<>CharacterBody2D<>::
 pool.gd::GDScript::-1::1731081007::0::1::::<>StaticBody2D<>::
-shop.gd::GDScript::-1::1731507148::0::1::::Shop<>Control<>::
+shop.gd::GDScript::-1::1731508419::0::1::::Shop<>Control<>::
 shop_button.gd::GDScript::-1::1731075441::0::1::::<>Button<>::
 world.gd::GDScript::-1::1731078712::0::1::::<>Node2D<>::
 ::res://time/::1731078281
