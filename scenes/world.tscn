@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cb10ol5mymmvm"]
+[gd_scene load_steps=25 format=3 uid="uid://cb10ol5mymmvm"]
 
 [ext_resource type="PackedScene" uid="uid://bfc6d1hc3y7ro" path="res://scenes/player.tscn" id="1_e3m6d"]
 [ext_resource type="Texture2D" uid="uid://e47hfx4sbv84" path="res://art/tileset/grass and dirt.png" id="1_hd8dm"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://lrywhla652aw" path="res://scenes/shop_button.tscn" id="9_y7i6x"]
 [ext_resource type="Script" path="res://time/time_system.gd" id="10_cfupt"]
 [ext_resource type="Script" path="res://time/date_time.gd" id="11_2no0j"]
+[ext_resource type="PackedScene" uid="uid://bgntqorkwwows" path="res://time/time_ui.tscn" id="12_7sexq"]
 [ext_resource type="PackedScene" uid="uid://bsrwxommesx8i" path="res://scenes/pool.tscn" id="14_f7nio"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqmqa"]
@@ -203,6 +204,7 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="Time" type="Label" parent="CanvasLayer"]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -210,6 +212,15 @@ offset_left = -40.0
 offset_bottom = 23.0
 grow_horizontal = 0
 text = "? AM"
+
+[node name="TimeGui" parent="CanvasLayer" instance=ExtResource("12_7sexq")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_right = 0.0
+offset_bottom = 54.0
+grow_horizontal = 0
 
 [node name="TimeSystem" type="Node" parent="."]
 script = ExtResource("10_cfupt")
@@ -221,5 +232,6 @@ position = Vector2(128, 97)
 [connection signal="sendDay" from="." to="Pool" method="_on_world_send_day"]
 [connection signal="update_holded_item" from="CanvasLayer/HotbarGui" to="Pool" method="_on_hotbar_gui_update_holded_item"]
 [connection signal="isOpen" from="CanvasLayer/ShopButton" to="CanvasLayer/Shop" method="_on_shop_button_is_open"]
+[connection signal="time_updated" from="TimeSystem" to="CanvasLayer/TimeGui" method="_on_time_system_time_updated"]
 [connection signal="getDay" from="Pool" to="." method="_on_pool_get_day"]
 [connection signal="item_resource_send" from="Pool" to="CanvasLayer/HotbarGui" method="_on_pool_item_resource_send"]

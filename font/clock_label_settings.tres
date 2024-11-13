@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://d1l33in81mqsh"]
+
+[ext_resource type="FontFile" uid="uid://chmcl5ak4qe8q" path="res://font/nokiafc22.ttf" id="1_xshds"]
+
+[resource]
+font = ExtResource("1_xshds")
+font_size = 11
+font_color = Color(0.278431, 0.184314, 0.12549, 1)

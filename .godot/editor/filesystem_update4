@@ -6,3 +6,7 @@ res://scenes/shop.tscn
 res://scripts/pool.gd
 res://hotbar/hotbar.gd
 res://scripts/hotbar_gui.gd
+res://time/time_ui.tscn
+res://font/clock_label_settings.tres
+res://time/time_system.gd
+res://time/time_ui.gd
