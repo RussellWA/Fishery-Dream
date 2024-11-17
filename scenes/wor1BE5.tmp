@@ -162,7 +162,6 @@ position = Vector2(221, 95)
 process_mode = 3
 
 [node name="TimeGui" parent="CanvasLayer" instance=ExtResource("12_7sexq")]
-z_index = 0
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -223,10 +222,8 @@ date_time = SubResource("Resource_2jrq5")
 [node name="Pool" parent="." instance=ExtResource("14_f7nio")]
 position = Vector2(128, 97)
 
-[connection signal="changeDay" from="." to="CanvasLayer/TimeGui" method="_on_world_change_day"]
 [connection signal="fade" from="." to="CanvasLayer/TransitionScene" method="_on_world_fade"]
 [connection signal="sendDay" from="." to="Pool" method="_on_world_send_day"]
-[connection signal="fade_completed" from="CanvasLayer/TransitionScene" to="." method="_on_transition_scene_fade_completed"]
 [connection signal="update_holded_item" from="CanvasLayer/HotbarGui" to="Pool" method="_on_hotbar_gui_update_holded_item"]
 [connection signal="isOpen" from="CanvasLayer/ShopButton" to="CanvasLayer/Shop" method="_on_shop_button_is_open"]
 [connection signal="time_updated" from="TimeSystem" to="CanvasLayer/TimeGui" method="_on_time_system_time_updated"]

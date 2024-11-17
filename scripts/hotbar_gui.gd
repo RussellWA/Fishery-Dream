@@ -41,17 +41,17 @@ func update():
 		itemGui.update()
 
 func onSlotClicked(slot):
-	if slot.isEmpty() && holdedItem:
+	if slot.isEmpty() and holdedItem:
 		insertItemToSlot(slot)
 		return
 	
-	if !holdedItem && slot.isEmpty():
+	if !holdedItem and slot.isEmpty():
 		return
 	
 	if !holdedItem:
 		takeItemFromSlot(slot)
 		
-	if holdedItem && !slot.isEmpty():
+	if holdedItem and !slot.isEmpty():
 		swapItems(slot)
 	
 func takeItemFromSlot(slot): 

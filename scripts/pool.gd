@@ -32,7 +32,7 @@ func _ready():
 	interaction_area.interact = Callable(self, "_open_ui")
 
 func _open_ui():
-	if(curr_fish != "empty" && end_day <= curr_day):
+	if(curr_fish != "empty" and end_day <= curr_day):
 		var item_data = items.filter(func(item): return item["name"].to_lower() == curr_fish)
 		var hotbar_item = item_data[0]["resource"]
 		if hotbar_item:
@@ -42,7 +42,7 @@ func _open_ui():
 			curr_fish = "empty"
 			end_day = 0
 			play_anim()
-	elif(curr_fish != "empty" && curr_day != end_day):
+	elif(curr_fish != "empty" and curr_day != end_day):
 		print(curr_fish, " Not done")
 	else:
 		print("empty")

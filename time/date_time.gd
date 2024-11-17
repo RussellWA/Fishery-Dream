@@ -17,12 +17,12 @@ func increase_by_seconds(delta_seconds: float) -> void:
 	seconds += delta_int_secs
 	minutes += seconds / 60
 	hours += minutes / 60
-	days += hours / 24
+	#days += hours / 24
 	
 	seconds = seconds % 60
 	minutes = minutes % 60
 	hours = hours % 24
 
-	if hours >= 24:
-		hours = 6  # Reset to 6 AM
-		days += 1  # Increment day
+	#if hours == 0:
+		#hours = 6
+		#days += 1

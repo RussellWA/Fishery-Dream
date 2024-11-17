@@ -1,12 +1,13 @@
 res://scenes/world.tscn
 res://hotbar/player_hotbar.tres
+res://font/clock_label_settings.tres
 res://scenes/pool.tscn
 res://gui/hotbar_gui.tscn
 res://scenes/shop.tscn
-res://scripts/pool.gd
-res://hotbar/hotbar.gd
-res://scripts/hotbar_gui.gd
 res://time/time_ui.tscn
-res://font/clock_label_settings.tres
+res://scripts/world.gd
+res://time/transition_scene.tscn
+res://time/transition_scene.gd
+res://time/date_time.gd
 res://time/time_system.gd
 res://time/time_ui.gd

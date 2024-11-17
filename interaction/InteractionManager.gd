@@ -17,7 +17,7 @@ func unregister_area(area: InteractionArea):
 		active_areas.remove_at(index)
 
 func _process(delta):
-	if active_areas.size() > 0 && can_interact:
+	if active_areas.size() > 0 and can_interact:
 		active_areas.sort_custom(_sort_by_distance_to_player)
 		label.text = base_text + active_areas[0].action_name
 		label.global_position = active_areas[0].global_position
@@ -33,7 +33,7 @@ func _sort_by_distance_to_player(area1, area2):
 	return area1_to_player < area2_to_player
 
 func _input(event):
-	if event.is_action_pressed("interact") && can_interact:
+	if event.is_action_pressed("interact") and can_interact:
 		if active_areas.size() > 0:
 			can_interact = false
 			label.hide()

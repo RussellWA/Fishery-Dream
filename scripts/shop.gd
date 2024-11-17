@@ -37,7 +37,7 @@ func buyItem():
 		var item_resource: Resource = load(item_data["resource"])
 		var canAfford: bool = player.spend_money(item_price)
 		var haveSpace: bool = hotbar.checkSlots(item_resource)
-		if (canAfford && haveSpace):
+		if (canAfford and haveSpace):
 			var hotbar_item = item_resource
 			if hotbar_item:
 				hotbar.insert(hotbar_item)
@@ -58,7 +58,7 @@ func setShopItems():
 func displayInfo(idx: int):
 	item_data = seeds[idx]
 	
-	if((info_sprite.texture != null && info_label.text == item_data["name"]) || idx == -1):
+	if((info_sprite.texture != null and info_label.text == item_data["name"]) || idx == -1):
 		info_sprite.texture = null
 		info_label.text = ""
 		buy_btn.text = "Price"
