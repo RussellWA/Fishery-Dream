@@ -28,3 +28,12 @@ func takeItem():
 	return item
 
 func isEmpty(): return !itemGui
+
+func insertSell(item: ItemGui):
+	itemGui = item
+	backgroundSprite.frame = 1
+	
+	container.add_child(itemGui)
+	
+	if !itemGui.hotbarSlot || hotbar.slots[index] == itemGui.hotbarSlot: return
+

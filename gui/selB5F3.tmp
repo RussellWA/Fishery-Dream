@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce1b07dnnq8vp"]
+
+[ext_resource type="Script" path="res://gui/sell_gui.gd" id="1_rvsbm"]
+[ext_resource type="Texture2D" uid="uid://b068h3i43bn4i" path="res://art/shop/sell ui.png" id="2_n40mq"]
+[ext_resource type="PackedScene" uid="uid://y7ns0r820gy3" path="res://gui/slot_gui.tscn" id="3_f5nia"]
+[ext_resource type="Texture2D" uid="uid://dwkuitk0800m3" path="res://art/shop/Wood Sign sell.png" id="4_masy5"]
+
+[node name="SellGui" type="Control"]
+layout_mode = 3
+anchor_left = 0.021
+anchor_top = 0.042
+anchor_right = 0.053
+anchor_bottom = 0.104
+offset_left = -0.320004
+offset_top = -0.360004
+offset_right = 0.23999
+offset_bottom = -0.32
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rvsbm")
+metadata/_edit_horizontal_guides_ = [0.0, 45.0]
+metadata/_edit_vertical_guides_ = [40.0]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 10.75
+offset_top = 31.25
+offset_right = 50.75
+offset_bottom = 67.25
+texture = ExtResource("2_n40mq")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+metadata/_edit_lock_ = true
+
+[node name="Slot" parent="NinePatchRect" instance=ExtResource("3_f5nia")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 27.0
+offset_bottom = 25.0
+
+[node name="WoodSignSell" type="Sprite2D" parent="."]
+position = Vector2(30.75, 11.25)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_masy5")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="NinePatchRect/Slot" to="." method="_on_slot_pressed"]

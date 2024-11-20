@@ -23,13 +23,10 @@ var previous_day: int = -1
 func _ready():
 	# Update the time label when the scene is loaded
 	update_time_label()
-
+	
 func _process(delta: float) -> void:
 	# Continuously update the label every frame
 	update_time_label()
-	if curr_day != previous_day: 
-		sendDay.emit(curr_day) 
-		previous_day = curr_day
 	
 	if time_system.date_time.hours == 23 and time_system.date_time.minutes == 59 and not has_transitioned:
 		transition()
@@ -58,9 +55,15 @@ func _on_transition_scene_fade_completed(isBlack):
 		time_system.date_time.hours = 6
 		time_system.date_time.minutes = 0
 		var day = curr_day + 1
+		if curr_day != previous_day: 
+			sendDay.emit(curr_day) 
+			previous_day = curr_day
 		changeDay.emit(day, 6, 0)
 		fade.emit(false)
 	else:
 		time_system.toggle_time_pause()
 		get_tree().paused = false
 		has_transitioned = false
+
+func _on_house_sleep():
+	transition()

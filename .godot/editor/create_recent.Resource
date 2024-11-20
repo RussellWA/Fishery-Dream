@@ -1,2 +1,2 @@
-HotbarItem
 Hotbar
+HotbarItem

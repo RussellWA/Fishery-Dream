@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://bsrwxommesx8i"]
+[gd_scene load_steps=17 format=3 uid="uid://bsrwxommesx8i"]
 
 [ext_resource type="Texture2D" uid="uid://0b2yp1aafic7" path="res://art/objects/Pool.png" id="1_4qa5o"]
 [ext_resource type="Script" path="res://scripts/pool.gd" id="1_x11aq"]
 [ext_resource type="PackedScene" uid="uid://dblpab3x2hn1s" path="res://interaction/interaction area/interaction.tscn" id="2_18f1d"]
 [ext_resource type="Texture2D" uid="uid://ds04ivxt6apfx" path="res://art/objects/pool with fish-Sheet.png" id="3_8nghh"]
+[ext_resource type="Texture2D" uid="uid://b068h3i43bn4i" path="res://art/shop/sell ui.png" id="5_d0p6x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_os82a"]
 atlas = ExtResource("1_4qa5o")
@@ -99,4 +100,15 @@ action_name = "toggle"
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_oh4yr")
 
-[connection signal="pool_enter" from="InteractionArea" to="." method="_on_interaction_area_pool_enter"]
+[node name="Board" type="NinePatchRect" parent="."]
+visible = false
+offset_left = -15.0
+offset_top = -51.0
+offset_right = 15.0
+offset_bottom = -22.0
+texture = ExtResource("5_d0p6x")
+
+[node name="FishSprite" type="Sprite2D" parent="Board"]
+position = Vector2(15, 14)
+
+[connection signal="area_enter" from="InteractionArea" to="." method="_on_interaction_area_area_enter"]

@@ -9,11 +9,14 @@ var curr_direction = "none"
 var money: int = 10
 
 func _ready():
+	
 	update_money_label()
 	interaction_area.interact = Callable(self, "on_interact")
 
 func add_money(amount: int):
+	print("Added money: ", amount)
 	money += amount
+	update_money_label()
 	
 func spend_money(amount: int):
 	if money >= amount:

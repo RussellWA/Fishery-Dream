@@ -35,6 +35,10 @@ func insert(item: HotbarItem):
 			emptySlots[0].amount = 1
 	updated.emit()
 
+func reduceAmount(item: HotbarItem):
+	var itemSlots = slots.filter(func(slot): return slot.item == item)
+	itemSlots[0].amount -= 1
+
 func removeItemAtIndex(index: int):
 	slots[index] = HotbarSlot.new()
 

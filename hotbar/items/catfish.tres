@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cnivqskxt425i"]
+[gd_resource type="Resource" script_class="HotbarItem" load_steps=3 format=3 uid="uid://cnivqskxt425i"]
 
 [ext_resource type="Script" path="res://hotbar/hotbar_item.gd" id="1_s0xx2"]
 [ext_resource type="Texture2D" uid="uid://b3k5rg4b04aj4" path="res://art/items/lele.png" id="2_2aj3y"]
 
 [resource]
 script = ExtResource("1_s0xx2")
-name = ""
-count = 1
+name = "catfish"
 texture = ExtResource("2_2aj3y")

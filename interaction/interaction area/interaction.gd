@@ -1,7 +1,7 @@
 extends Area2D
 class_name InteractionArea
 
-signal pool_enter(isTrue: bool)
+signal area_enter(isTrue: bool)
 
 @export var action_name: String = "interact"
 
@@ -10,8 +10,8 @@ var interact: Callable = func():
 
 func _on_body_entered(body):
 	InteractionManager.register_area(self)
-	pool_enter.emit(true)
+	area_enter.emit(true)
 
 func _on_body_exited(body):
 	InteractionManager.unregister_area(self)
-	pool_enter.emit(false)
+	area_enter.emit(false)
