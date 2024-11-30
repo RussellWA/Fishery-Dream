@@ -21,8 +21,14 @@ func checkSlots(item: HotbarItem):
 func removeSlot(item: HotbarItem):
 	var itemSlots = slots.filter(func(slot): return slot.item == item)
 	for i in range(slots.size()): 
-		if slots[i].item == item:
+		if slots[i] != null and slots[i].item != null and slots[i].item == item:
 			removeItemAtIndex(i)
+
+func removeByName(name: String):
+	for i in range(slots.size()):
+		if slots[i] != null and slots[i].item != null and slots[i].item.name == name:
+			removeItemAtIndex(i)
+			return
 
 func insert(item: HotbarItem):
 	var itemSlots = slots.filter(func(slot): return slot.item == item)

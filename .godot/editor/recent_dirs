@@ -1,10 +1,11 @@
-res://scenes
 res://scripts
+res://scenes
+res://art/character
+res://time
+res://
 res://interaction/interaction area
 res://gui
 res://font
-res://time
 res://hotbar/seeds
 res://art/objects
 res://interaction
-res://

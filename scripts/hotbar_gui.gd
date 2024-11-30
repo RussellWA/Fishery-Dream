@@ -97,8 +97,11 @@ func _on_pool_item_resource_send(item_resource):
 func _on_sell_gui_get_held_item(slot):
 	sell_held_item.emit(slot, heldItem)
 
-func _on_sell_gui_item_sold():
+func _on_sell_gui_item_sold(fish):
+	remove_child(heldItem)
 	heldItem = null
+	hotbar.removeByName(fish)
+	update()
 
 func _on_pool_harvest_updated():
 	update()

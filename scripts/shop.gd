@@ -3,13 +3,13 @@ extends Control
 class_name Shop
 
 var seeds = [
-	{"name": "Catfish", "price": 2, "sprite": "res://art/items/Catfish Seed.png", "resource": "res://hotbar/seeds/catfishSeed.tres"},
-	{"name": "Tilapia", "price": 2, "sprite": "res://art/items/Tilapia Seed.png", "resource": "res://hotbar/seeds/tilapiaSeed.tres"},
-	{"name": "Gourami", "price": 4, "sprite": "res://art/items/Gourami Seed.png", "resource": "res://hotbar/seeds/gouramiSeed.tres"},
-	{"name": "Pomfret", "price": 4, "sprite": "res://art/items/Pomfret Seed.png", "resource": "res://hotbar/seeds/pomfretSeed.tres"},
-	{"name": "SnakeHead", "price": 6, "sprite": "res://art/items/Snakehead Seed.png", "resource": "res://hotbar/seeds/snakeHeadSeed.tres"},
-	{"name": "SilverCatfish", "price": 8, "sprite": "res://art/items/Sliver catfish Seed.png", "resource": "res://hotbar/seeds/silverCatfishSeed.tres"},
-	{"name": "Belida", "price": 10, "sprite": "res://art/items/Belida Seed.png", "resource": "res://hotbar/seeds/belidaSeed.tres"}
+	{"name": "Catfish", "price": 2, "sprite": "res://art/items/Catfish Seed.png", "resource": "res://hotbar/seeds/catfishSeed.tres", "isLocked": false},
+	{"name": "Tilapia", "price": 2, "sprite": "res://art/items/Tilapia Seed.png", "resource": "res://hotbar/seeds/tilapiaSeed.tres", "isLocked": true},
+	{"name": "Gourami", "price": 4, "sprite": "res://art/items/Gourami Seed.png", "resource": "res://hotbar/seeds/gouramiSeed.tres", "isLocked": true},
+	{"name": "Pomfret", "price": 4, "sprite": "res://art/items/Pomfret Seed.png", "resource": "res://hotbar/seeds/pomfretSeed.tres", "isLocked": true},
+	{"name": "SnakeHead", "price": 6, "sprite": "res://art/items/Snakehead Seed.png", "resource": "res://hotbar/seeds/snakeHeadSeed.tres", "isLocked": true},
+	{"name": "SilverCatfish", "price": 8, "sprite": "res://art/items/Sliver catfish Seed.png", "resource": "res://hotbar/seeds/silverCatfishSeed.tres", "isLocked": true},
+	{"name": "Belida", "price": 10, "sprite": "res://art/items/Belida Seed.png", "resource": "res://hotbar/seeds/belidaSeed.tres", "isLocked": true}
 ]
 
 signal opened
@@ -32,7 +32,7 @@ func _ready():
 	setShopItems()
 
 func buyItem():
-	if(item_data):
+	if(item_data and !item_data["isLocked"]):
 		var item_price: int = item_data["price"]
 		var item_resource: Resource = load(item_data["resource"])
 		var canAfford: bool = player.spend_money(item_price)
@@ -41,6 +41,8 @@ func buyItem():
 			var hotbar_item = item_resource
 			if hotbar_item:
 				hotbar.insert(hotbar_item)
+	elif(item_data and item_data["isLocked"]):
+		print(item_data["name"], " Locked")
 
 func setShopItems():
 	var buttons = $NinePatchRect/GridContainer.get_children()
@@ -72,3 +74,10 @@ func displayInfo(idx: int):
 func _on_shop_button_is_open(value):
 	if !value:
 		displayInfo(-1)
+
+func _on_player_unlock_fish(fish):
+	print("Unlock ", fish);
+	for seed in seeds:
+		if seed["name"] == fish:
+			seed["isLocked"] = false
+			return

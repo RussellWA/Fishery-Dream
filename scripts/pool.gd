@@ -35,6 +35,7 @@ func _ready():
 	interaction_area.interact = Callable(self, "_open_ui")
 
 func _open_ui():
+	print("connnect? ", click_area.input_event.is_connected(_on_click_area_input_event))
 	if(curr_fish != "empty" and end_day <= curr_day):
 		var item_data = items.filter(func(item): return item["name"].to_lower() == curr_fish)
 		var hotbar_item = item_data[0]
@@ -74,16 +75,21 @@ func _on_hotbar_gui_update_held_item(item: ItemGui):
 		heldItem = null
 
 func _on_click_area_input_event(viewport, event, shape_idx):
+	print("Input event detected")
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and isPoolEntered:
-		if heldItem and curr_fish == "empty" and "seed" in heldItem.itemName.to_lower():
-			var extracted_string = heldItem.itemName.to_lower().split("seed")[0]
-			curr_fish = extracted_string
-			var item_data = items.filter(func(item): return item["name"].to_lower() == curr_fish)
-			fishSprite.texture = load(item_data[0]["image"])
-			if item_data.size() > 0:
-				item_resource_send.emit(item_data[0]["seed"])
-				end_day = curr_day + item_data[0]["duration"]
-				play_anim()
+		print("2 | pressed? ", event.pressed, " mousebtn: ", event.button_index,)
+		print("3 | heldItem: ", heldItem, " curr_fish: ", curr_fish)
+		if heldItem and curr_fish == "empty": 
+			print("4 | seed name: ", heldItem.itemName.to_lower())
+			if "seed" in heldItem.itemName.to_lower(): 
+				var extracted_string = heldItem.itemName.to_lower().split("seed")[0]
+				curr_fish = extracted_string
+				var item_data = items.filter(func(item): return item["name"].to_lower() == curr_fish)
+				fishSprite.texture = load(item_data[0]["image"])
+				if item_data.size() > 0:
+					item_resource_send.emit(item_data[0]["seed"])
+					end_day = curr_day + item_data[0]["duration"]
+					play_anim()
 				
 func _on_world_send_day(time):
 	board.visible = false
@@ -91,3 +97,6 @@ func _on_world_send_day(time):
 
 func _on_interaction_area_area_enter(isTrue):
 	isPoolEntered = isTrue
+
+func _on_click_area_mouse_entered():
+	print("Mouse entered detected")

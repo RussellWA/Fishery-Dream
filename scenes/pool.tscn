@@ -111,4 +111,6 @@ texture = ExtResource("5_d0p6x")
 [node name="FishSprite" type="Sprite2D" parent="Board"]
 position = Vector2(15, 14)
 
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
+[connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
 [connection signal="area_enter" from="InteractionArea" to="." method="_on_interaction_area_area_enter"]

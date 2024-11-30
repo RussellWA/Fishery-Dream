@@ -48,25 +48,25 @@ offset_bottom = 35.0
 grow_vertical = 2
 columns = 3
 
-[node name="Shop Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+[node name="CatfishBtn" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
 layout_mode = 2
 
-[node name="Shop Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+[node name="TilapiaBtn" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
 layout_mode = 2
 
-[node name="Shop Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+[node name="GouramiBtn" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
 layout_mode = 2
 
-[node name="Shop Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+[node name="PomfretBtn" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
 layout_mode = 2
 
-[node name="Shop Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+[node name="SnakeHeadBtn" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
 layout_mode = 2
 
-[node name="Shop Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+[node name="SilverCatfishBtn" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
 layout_mode = 2
 
-[node name="Shop Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
+[node name="BelidaBtn" parent="NinePatchRect/GridContainer" instance=ExtResource("2_nbrv7")]
 layout_mode = 2
 
 [node name="Sign" type="Panel" parent="."]

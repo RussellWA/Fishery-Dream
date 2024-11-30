@@ -1,6 +1,7 @@
 extends Node2D
 
 signal fade(isTrue: bool)
+signal cycle(isNight: bool)
 signal sendDay(time: int)
 signal changeDay(day: int, hour: int, minute: int)
 
@@ -18,6 +19,8 @@ signal changeDay(day: int, hour: int, minute: int)
 
 var has_transitioned: bool = false
 
+var has_cycle: bool = false
+
 var previous_day: int = -1
 
 func _ready():
@@ -31,6 +34,10 @@ func _process(delta: float) -> void:
 	if time_system.date_time.hours == 23 and time_system.date_time.minutes == 59 and not has_transitioned:
 		transition()
 		has_transitioned = true
+	
+	if time_system.date_time.hours == 18 and time_system.date_time.minutes == 0 and not has_transitioned:
+		day_to_night()
+		has_cycle = true
 
 func update_time_label() -> void:
 	# Get the hours and minutes from the DateTime instance
@@ -43,6 +50,9 @@ func update_time_label() -> void:
 	
 	# Update the label with the current day and time
 	curr_day = time_system.date_time.days
+
+func day_to_night() -> void:
+	cycle.emit(true)
 
 func transition() -> void:
 	time_system.toggle_time_pause()
@@ -59,6 +69,7 @@ func _on_transition_scene_fade_completed(isBlack):
 			sendDay.emit(curr_day) 
 			previous_day = curr_day
 		changeDay.emit(day, 6, 0)
+		cycle.emit(false)
 		fade.emit(false)
 	else:
 		time_system.toggle_time_pause()

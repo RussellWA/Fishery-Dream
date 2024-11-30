@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+signal unlock_fish(fish: String)
+
+var catfish_progress: int = 5
+
 @onready var money_label: Label = $"../CanvasLayer/Money"
 @onready var interaction_area: InteractionArea = $InteractionArea
 
@@ -9,7 +13,6 @@ var curr_direction = "none"
 var money: int = 10
 
 func _ready():
-	
 	update_money_label()
 	interaction_area.interact = Callable(self, "on_interact")
 
@@ -90,3 +93,10 @@ func play_anim(movement):
 		else:
 			anim.play("idle_down")
 
+func check_progress(fish: String, amount: int):
+	print("Fish: ", fish, "amount: ", amount)
+	if catfish_progress != 0 and fish == "catfish":
+		catfish_progress -= amount
+		print(catfish_progress)
+		if catfish_progress == 0: unlock_fish.emit("Tilapia")
+		return

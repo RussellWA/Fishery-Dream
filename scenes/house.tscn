@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dp2hg4fomobs2"]
 
-[ext_resource type="Script" path="res://scenes/house.gd" id="1_8pm8a"]
+[ext_resource type="Script" path="res://scripts/house.gd" id="1_8pm8a"]
 [ext_resource type="Texture2D" uid="uid://cuwo5f55w2fp4" path="res://art/objects/House fixed.png" id="2_wlljj"]
 [ext_resource type="PackedScene" uid="uid://dblpab3x2hn1s" path="res://interaction/interaction area/interaction.tscn" id="3_xtxi5"]
 

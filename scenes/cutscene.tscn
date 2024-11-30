@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7uk7f3hfiblq"]
+
+[ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_agf0x"]
+[ext_resource type="VideoStream" path="res://video/Cutscene-jadi.ogv" id="2_hvmb8"]
+
+[node name="Cutscene" type="Node2D"]
+script = ExtResource("1_agf0x")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_hvmb8")
+expand = true
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

@@ -3,7 +3,11 @@ class_name TimeSystem extends Node
 signal time_updated
 
 @export var date_time: DateTime
-@export var ticks_pr_second: float = 5000
+@export var ticks_pr_second: float = 1080
+
+# 216 = 5 minutes
+# 360 = 3 minutes
+# 1080 = 1 minute
 
 var previous_minute: int = -1
 

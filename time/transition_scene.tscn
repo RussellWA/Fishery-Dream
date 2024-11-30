@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://time/transition_scene.gd" id="1_wwyhx"]
 
 [sub_resource type="Animation" id="Animation_x7v1i"]
-length = 0.001
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
