@@ -1,0 +1,116 @@
+[gd_scene load_steps=17 format=3 uid="uid://bsrwxommesx8i"]
+
+[ext_resource type="Texture2D" uid="uid://0b2yp1aafic7" path="res://art/objects/Pool.png" id="1_4qa5o"]
+[ext_resource type="Script" path="res://scripts/pool.gd" id="1_x11aq"]
+[ext_resource type="PackedScene" uid="uid://dblpab3x2hn1s" path="res://interaction/interaction area/interaction.tscn" id="2_18f1d"]
+[ext_resource type="Texture2D" uid="uid://ds04ivxt6apfx" path="res://art/objects/pool with fish-Sheet.png" id="3_8nghh"]
+[ext_resource type="Texture2D" uid="uid://b068h3i43bn4i" path="res://art/shop/sell ui.png" id="5_d0p6x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os82a"]
+atlas = ExtResource("1_4qa5o")
+region = Rect2(0, 0, 64, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_maqyr"]
+atlas = ExtResource("1_4qa5o")
+region = Rect2(64, 0, 64, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exdxs"]
+atlas = ExtResource("1_4qa5o")
+region = Rect2(128, 0, 64, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8q4nb"]
+atlas = ExtResource("1_4qa5o")
+region = Rect2(192, 0, 64, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1trjp"]
+atlas = ExtResource("3_8nghh")
+region = Rect2(0, 0, 64, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bihn"]
+atlas = ExtResource("3_8nghh")
+region = Rect2(64, 0, 64, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wigx2"]
+atlas = ExtResource("3_8nghh")
+region = Rect2(128, 0, 64, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdejl"]
+atlas = ExtResource("3_8nghh")
+region = Rect2(192, 0, 64, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fyrkn"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_os82a")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_maqyr")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_exdxs")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_8q4nb")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_1trjp")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_7bihn")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_wigx2")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_tdejl")
+}],
+"loop": true,
+"name": &"fish",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps487"]
+size = Vector2(64, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oh4yr"]
+size = Vector2(74, 41)
+
+[node name="Pool" type="StaticBody2D"]
+script = ExtResource("1_x11aq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fyrkn")
+animation = &"empty"
+
+[node name="ClickArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+shape = SubResource("RectangleShape2D_ps487")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_18f1d")]
+action_name = "toggle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_oh4yr")
+
+[node name="Board" type="NinePatchRect" parent="."]
+visible = false
+offset_left = -15.0
+offset_top = -51.0
+offset_right = 15.0
+offset_bottom = -22.0
+texture = ExtResource("5_d0p6x")
+
+[node name="FishSprite" type="Sprite2D" parent="Board"]
+position = Vector2(15, 14)
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
+[connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]
+[connection signal="area_enter" from="InteractionArea" to="." method="_on_interaction_area_area_enter"]

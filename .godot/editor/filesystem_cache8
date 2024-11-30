@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732962636
+::res://::1732976755
 ::res://art/::1732717228
 ::res://art/character/::1732722204
 New_Chara_Design_Outline_shadow_5.png::CompressedTexture2D::2781493596940242026::1732721704::1732721704::1::::<><>::
@@ -49,9 +49,9 @@ fishery dream logo.png::CompressedTexture2D::5200621929998230626::1732717241::17
 Setting Button.png::CompressedTexture2D::7117297252774662988::1732717232::1732717232::1::::<><>::
 Start Button.png::CompressedTexture2D::7329570237464003911::1732717234::1732717235::1::::<><>::
 title screen.png::CompressedTexture2D::8547198438580615322::1732718175::1732718175::1::::<><>::
-::res://font/::1732720223
+::res://font/::1732965461
 8-bit-hud.ttf::FontFile::8648874956762335452::1729260571::1729260617::1::::<><>::
-clock_label_settings.tres::LabelSettings::9008630660793463819::1732720223::0::1::::<><>::uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf
+clock_label_settings.tres::LabelSettings::9008630660793463819::1732965461::0::1::::<><>::uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf
 nokiafc22.ttf::FontFile::5289078459813879826::1729260571::1729260617::1::::<><>::
 ::res://gui/::1732545957
 hotbar_gui.tscn::PackedScene::8901531233085749809::1732545957::0::1::::<><>::res://scripts/hotbar_gui.gd<>uid://dwdi70ssgml3c::::res://art/shop/UI Recolor.png<>uid://y7ns0r820gy3::::res://gui/slot_gui.tscn
@@ -62,11 +62,11 @@ sell_gui.tscn::PackedScene::5107377611374593165::1732545957::0::1::::<><>::res:/
 shop_slot_gui.tscn::PackedScene::5996369892973307148::1730386094::0::1::::<><>::uid://witkqyu3sq3n::::res://art/inventory/Slots Recolor-Sheet.png
 slot_gui.gd::GDScript::-1::1732029652::0::1::::<>Button<>::
 slot_gui.tscn::PackedScene::1751415141520811324::1732029967::0::1::::<><>::res://gui/slot_gui.gd<>uid://witkqyu3sq3n::::res://art/inventory/Slots Recolor-Sheet.png
-::res://hotbar/::1732720223
+::res://hotbar/::1732965461
 hotbar.gd::GDScript::-1::1732544782::0::1::::Hotbar<>Resource<>::
 hotbar_item.gd::GDScript::-1::1731507215::0::1::::HotbarItem<>Resource<>::
 hotbar_slot.gd::GDScript::-1::1730394243::0::1::::HotbarSlot<>Resource<>::
-player_hotbar.tres::Resource/Hotbar::7069077855940929769::1732720223::0::1::::<><>::res://hotbar/hotbar.gd<>res://hotbar/hotbar_slot.gd
+player_hotbar.tres::Resource/Hotbar::7069077855940929769::1732965461::0::1::::<><>::res://hotbar/hotbar.gd<>res://hotbar/hotbar_slot.gd
 ::res://hotbar/items/::1732110054
 belida.tres::Resource/Resource::2938564178707433012::1729260571::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://dtptntq7q0q54::::res://art/items/Belida.png
 catfish.tres::Resource/Resource::5703115948203599336::1732110054::0::1::::<><>::res://hotbar/hotbar_item.gd<>uid://b3k5rg4b04aj4::::res://art/items/lele.png
@@ -90,23 +90,23 @@ InteractionManager.tscn::PackedScene::4531220641326396861::1732118881::0::1::::<
 crate_interaction.gd::GDScript::-1::1732117291::0::1::::CrateInteractionArea<>Area2D<>::
 interaction.gd::GDScript::-1::1732117790::0::1::::InteractionArea<>Area2D<>::
 interaction.tscn::PackedScene::7253069901762750722::1730817885::0::1::::<><>::res://interaction/interaction area/interaction.gd
-::res://scenes/::1732723413
+::res://scenes/::1732966280
 crate.tscn::PackedScene::4335780738028957667::1732545957::0::1::::<><>::res://scripts/crate.gd<>uid://dyamm4dljdqph::::res://art/objects/Crate2.png<>uid://dblpab3x2hn1s::::res://interaction/interaction area/interaction.tscn
-cutscene.tscn::PackedScene::7060836540413375226::1732723413::0::1::::<><>::res://scripts/cutscene.gd<>res://video/Cutscene-jadi.ogv
+cutscene.tscn::PackedScene::7060836540413375226::1732966280::0::1::::<><>::res://scripts/cutscene.gd<>res://video/Cutscene-jadi.ogv
 house.tscn::PackedScene::8268270170276057779::1732547055::0::1::::<><>::res://scripts/house.gd<>uid://cuwo5f55w2fp4::::res://art/objects/House fixed.png<>uid://dblpab3x2hn1s::::res://interaction/interaction area/interaction.tscn
-player.tscn::PackedScene::2743382618098861392::1732723385::0::1::::<><>::res://scripts/player.gd<>uid://bfvm175mw1nlq::::res://art/character/New_Chara_Design_Outline_shadow_5.png<>res://interaction/interaction area/interaction.gd
-pool.tscn::PackedScene::3686291892513235606::1732723385::0::1::::<><>::uid://0b2yp1aafic7::::res://art/objects/Pool.png<>res://scripts/pool.gd<>uid://dblpab3x2hn1s::::res://interaction/interaction area/interaction.tscn<>uid://ds04ivxt6apfx::::res://art/objects/pool with fish-Sheet.png<>uid://b068h3i43bn4i::::res://art/shop/sell ui.png
+player.tscn::PackedScene::2743382618098861392::1732966280::0::1::::<><>::res://scripts/player.gd<>uid://bfvm175mw1nlq::::res://art/character/New_Chara_Design_Outline_shadow_5.png<>res://interaction/interaction area/interaction.gd
+pool.tscn::PackedScene::3686291892513235606::1732966280::0::1::::<><>::uid://0b2yp1aafic7::::res://art/objects/Pool.png<>res://scripts/pool.gd<>uid://dblpab3x2hn1s::::res://interaction/interaction area/interaction.tscn<>uid://ds04ivxt6apfx::::res://art/objects/pool with fish-Sheet.png<>uid://b068h3i43bn4i::::res://art/shop/sell ui.png
 sell.tscn::PackedScene::1940139546207137217::1730386094::0::1::::<><>::uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn
 sell_button.tscn::PackedScene::1608562005094916224::1730386094::0::1::::<><>::res://scripts/shop_button.gd
-shop.tscn::PackedScene::956099976320686284::1732723385::0::1::::<><>::res://scripts/shop.gd<>uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn<>uid://cqn4y8hogyffv::::res://art/shop/Shop UI.png<>uid://b1qim3xstfkgf::::res://art/shop/Shop Sign.png<>uid://dwdi70ssgml3c::::res://art/shop/UI Recolor.png<>uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf
+shop.tscn::PackedScene::956099976320686284::1732966185::0::1::::<><>::res://scripts/shop.gd<>uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn<>uid://cqn4y8hogyffv::::res://art/shop/Shop UI.png<>uid://b1qim3xstfkgf::::res://art/shop/Shop Sign.png<>uid://dwdi70ssgml3c::::res://art/shop/UI Recolor.png<>uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf
 shop_button.tscn::PackedScene::808668581828611618::1732543369::0::1::::<><>::res://scripts/shop_button.gd<>uid://8nfgj2td41l1::::res://art/shop/shop button recolor.png
-title_screen.tscn::PackedScene::6032991367165023692::1732723385::0::1::::<><>::uid://dt1ldyuwlf0ty::::res://art/titlescreen/title screen.png<>res://scripts/title_screen.gd<>uid://dcoq7lkbjfva2::::res://art/titlescreen/Start Button.png
-world.tscn::PackedScene::4898247583242386278::1732723385::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://ibuyr54rj6g1::::res://art/objects/plot and pool sheet.png<>uid://c0p75gv0mw0l2::::res://art/shop/gold.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dyamm4dljdqph::::res://art/objects/Crate2.png<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>uid://cuwo5f55w2fp4::::res://art/objects/House fixed.png<>uid://nve3d6lx23wi::::res://scenes/shop.tscn<>uid://p7mhy7ixuiqh::::res://time/day_night.tscn<>uid://nd431cgg4wk::::res://time/transition_scene.tscn<>uid://lrywhla652aw::::res://scenes/shop_button.tscn<>res://time/time_system.gd<>res://time/date_time.gd<>uid://bgntqorkwwows::::res://time/time_ui.tscn<>uid://ce1b07dnnq8vp::::res://gui/sell_gui.tscn<>uid://bsrwxommesx8i::::res://scenes/pool.tscn<>uid://b21jw7vuel8pj::::res://scenes/crate.tscn<>uid://dp2hg4fomobs2::::res://scenes/house.tscn
-::res://scripts/::1732723384
+title_screen.tscn::PackedScene::6032991367165023692::1732966280::0::1::::<><>::uid://dt1ldyuwlf0ty::::res://art/titlescreen/title screen.png<>res://scripts/title_screen.gd<>uid://dcoq7lkbjfva2::::res://art/titlescreen/Start Button.png
+world.tscn::PackedScene::4898247583242386278::1732966280::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://ibuyr54rj6g1::::res://art/objects/plot and pool sheet.png<>uid://c0p75gv0mw0l2::::res://art/shop/gold.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dyamm4dljdqph::::res://art/objects/Crate2.png<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>uid://cuwo5f55w2fp4::::res://art/objects/House fixed.png<>uid://nve3d6lx23wi::::res://scenes/shop.tscn<>uid://p7mhy7ixuiqh::::res://time/day_night.tscn<>uid://nd431cgg4wk::::res://time/transition_scene.tscn<>uid://lrywhla652aw::::res://scenes/shop_button.tscn<>res://time/time_system.gd<>res://time/date_time.gd<>uid://bgntqorkwwows::::res://time/time_ui.tscn<>uid://ce1b07dnnq8vp::::res://gui/sell_gui.tscn<>uid://bsrwxommesx8i::::res://scenes/pool.tscn<>uid://b21jw7vuel8pj::::res://scenes/crate.tscn<>uid://dp2hg4fomobs2::::res://scenes/house.tscn
+::res://scripts/::1732966240
 button.gd::GDScript::-1::1729262334::0::1::::<>Button<>::
 close_sell_button.gd::GDScript::-1::1732120122::0::1::::<>Button<>::
 crate.gd::GDScript::-1::1732123608::0::1::::<>StaticBody2D<>::
-cutscene.gd::GDScript::-1::1732723384::0::1::::<>Node2D<>::
+cutscene.gd::GDScript::-1::1732966240::0::1::::<>Node2D<>::
 hotbar_gui.gd::GDScript::-1::1732545641::0::1::::<>Control<>::
 house.gd::GDScript::-1::1732123809::0::1::::<>StaticBody2D<>::
 player.gd::GDScript::-1::1732548715::0::1::::<>CharacterBody2D<>::

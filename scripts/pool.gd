@@ -33,9 +33,13 @@ func _ready():
 	play_anim()
 	click_area.input_event.connect(_on_click_area_input_event)
 	interaction_area.interact = Callable(self, "_open_ui")
+	get_parent().sendDay.connect(_on_world_send_day)
+
+func check_signal_status():
+	print("Signal connected? ", click_area.input_event.is_connected(_on_click_area_input_event))
 
 func _open_ui():
-	print("connnect? ", click_area.input_event.is_connected(_on_click_area_input_event))
+	check_signal_status()
 	if(curr_fish != "empty" and end_day <= curr_day):
 		var item_data = items.filter(func(item): return item["name"].to_lower() == curr_fish)
 		var hotbar_item = item_data[0]
@@ -74,13 +78,10 @@ func _on_hotbar_gui_update_held_item(item: ItemGui):
 	else:
 		heldItem = null
 
-func _on_click_area_input_event(viewport, event, shape_idx):
-	print("Input event detected")
+func _on_click_area_input_event(viewport: Object, event: InputEvent, shape_idx: int) -> void :
+	print("Current values - curr_fish: ", curr_fish, " | curr_day: ", curr_day, " | end_day: ", end_day)
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and isPoolEntered:
-		print("2 | pressed? ", event.pressed, " mousebtn: ", event.button_index,)
-		print("3 | heldItem: ", heldItem, " curr_fish: ", curr_fish)
 		if heldItem and curr_fish == "empty": 
-			print("4 | seed name: ", heldItem.itemName.to_lower())
 			if "seed" in heldItem.itemName.to_lower(): 
 				var extracted_string = heldItem.itemName.to_lower().split("seed")[0]
 				curr_fish = extracted_string
@@ -92,8 +93,10 @@ func _on_click_area_input_event(viewport, event, shape_idx):
 					play_anim()
 				
 func _on_world_send_day(time):
+	print("Updating day: ", time)  # Debugging line
+	if curr_day != time:
+		curr_day = time
 	board.visible = false
-	curr_day = time
 
 func _on_interaction_area_area_enter(isTrue):
 	isPoolEntered = isTrue

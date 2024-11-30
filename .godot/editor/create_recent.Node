@@ -1,3 +1,6 @@
+AnimatedSprite2D
+Panel
+Sprite2D
 CanvasLayer
 AspectRatioContainer
 Node2D
@@ -5,10 +8,8 @@ Camera2D
 Label
 VideoStreamPlayer
 Control
-Sprite2D
 Button
 TextureRect
 AnimationPlayer
 DirectionalLight2D
 CollisionShape2D
-InteractionArea

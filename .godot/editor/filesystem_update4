@@ -1,9 +1,11 @@
-res://scenes/shop.tscn
+res://scenes/title_screen.tscn
 res://hotbar/player_hotbar.tres
 res://font/clock_label_settings.tres
 res://scenes/world.tscn
 res://scenes/player.tscn
 res://scenes/pool.tscn
-res://scenes/title_screen.tscn
 res://scenes/cutscene.tscn
-res://scripts/cutscene.gd
+res://scripts/title_screen.gd
+res://scripts/pool.gd
+res://scripts/world.gd
+res://scenes/house.tscn

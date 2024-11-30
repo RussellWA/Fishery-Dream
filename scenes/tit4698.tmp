@@ -138,4 +138,4 @@ metadata/_edit_lock_ = true
 position = Vector2(167.974, 95.25)
 scale = Vector2(1.3966, 1.4037)
 sprite_frames = SubResource("SpriteFrames_angk1")
-frame_progress = 0.470048
+frame_progress = 0.584859
