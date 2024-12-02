@@ -280,7 +280,6 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer"]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/CanvasLayer"]
 anchors_preset = 15

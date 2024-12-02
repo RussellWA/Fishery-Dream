@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://bsrwxommesx8i"]
+[gd_scene load_steps=22 format=3 uid="uid://bsrwxommesx8i"]
 
 [ext_resource type="Texture2D" uid="uid://0b2yp1aafic7" path="res://art/objects/Pool.png" id="1_4qa5o"]
 [ext_resource type="Script" path="res://scripts/pool.gd" id="1_x11aq"]
 [ext_resource type="PackedScene" uid="uid://dblpab3x2hn1s" path="res://interaction/interaction area/interaction.tscn" id="2_18f1d"]
 [ext_resource type="Texture2D" uid="uid://ds04ivxt6apfx" path="res://art/objects/pool with fish-Sheet.png" id="3_8nghh"]
 [ext_resource type="Texture2D" uid="uid://b068h3i43bn4i" path="res://art/shop/sell ui.png" id="5_d0p6x"]
+[ext_resource type="Texture2D" uid="uid://cnl518kskv6m8" path="res://art/objects/Exclamation Mark.png" id="6_f4ubo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_os82a"]
 atlas = ExtResource("1_4qa5o")
@@ -81,6 +82,35 @@ size = Vector2(64, 34)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oh4yr"]
 size = Vector2(74, 41)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wyb5"]
+atlas = ExtResource("6_f4ubo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53rhm"]
+atlas = ExtResource("6_f4ubo")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsmlf"]
+atlas = ExtResource("6_f4ubo")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgs7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wyb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53rhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsmlf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Pool" type="StaticBody2D"]
 script = ExtResource("1_x11aq")
 
@@ -110,6 +140,19 @@ texture = ExtResource("5_d0p6x")
 
 [node name="FishSprite" type="Sprite2D" parent="Board"]
 position = Vector2(15, 14)
+
+[node name="Board2" type="NinePatchRect" parent="."]
+visible = false
+offset_left = -15.0
+offset_top = -51.0
+offset_right = 15.0
+offset_bottom = -22.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Board2"]
+position = Vector2(15, 14)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_tgs7s")
+frame_progress = 0.620057
 
 [connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]

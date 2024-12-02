@@ -19,7 +19,9 @@ signal item_resource_send(item_resource: String)
 @export var player_hotbar_path: String = "res://hotbar/player_hotbar.tres"
 @onready var hotbar: Hotbar = load(player_hotbar_path)
 @onready var board: NinePatchRect = $Board
+@onready var board2: NinePatchRect = $Board2
 @onready var fishSprite: Sprite2D = $Board/FishSprite
+@onready var exclam_anim: AnimatedSprite2D = $Board2/AnimatedSprite2D
 
 @onready var curr_fish: String = "empty"
 
@@ -51,6 +53,8 @@ func _open_ui():
 			curr_fish = "empty"
 			end_day = 0
 			fishSprite.texture = null
+			exclam_anim.stop()
+			board2.visible = false
 			play_anim()
 	elif(curr_fish != "empty" and curr_day != end_day):
 		print("not yet")
@@ -79,7 +83,6 @@ func _on_hotbar_gui_update_held_item(item: ItemGui):
 		heldItem = null
 
 func _on_click_area_input_event(viewport: Object, event: InputEvent, shape_idx: int) -> void :
-	print("Current values - curr_fish: ", curr_fish, " | curr_day: ", curr_day, " | end_day: ", end_day)
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and isPoolEntered:
 		if heldItem and curr_fish == "empty": 
 			if "seed" in heldItem.itemName.to_lower(): 
@@ -93,10 +96,15 @@ func _on_click_area_input_event(viewport: Object, event: InputEvent, shape_idx: 
 					play_anim()
 				
 func _on_world_send_day(time):
-	print("Updating day: ", time)  # Debugging line
 	if curr_day != time:
 		curr_day = time
 	board.visible = false
+	if(curr_fish != "empty" and end_day <= curr_day):
+		exclam_anim.play("default")
+		board2.visible = true
+	else:
+		exclam_anim.stop()
+		board2.visible = false
 
 func _on_interaction_area_area_enter(isTrue):
 	isPoolEntered = isTrue

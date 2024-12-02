@@ -25,10 +25,19 @@ func removeSlot(item: HotbarItem):
 			removeItemAtIndex(i)
 
 func removeByName(name: String):
+	print("remove ", name)
 	for i in range(slots.size()):
-		if slots[i] != null and slots[i].item != null and slots[i].item.name == name:
+		print("idx ", i);
+		if slots[i] != null and slots[i].item != null and slots[i].item.name.to_lower() == name:
 			removeItemAtIndex(i)
 			return
+		#elif slots[i] != null and slots[i].item != null:
+			#print("item name: ", slots[i].item.name)
+		#elif slots[i] == null:
+			#print("slot null")
+		#elif slots[i].item == null:
+			#print("item null")
+			
 
 func insert(item: HotbarItem):
 	var itemSlots = slots.filter(func(slot): return slot.item == item)
@@ -46,6 +55,7 @@ func reduceAmount(item: HotbarItem):
 	itemSlots[0].amount -= 1
 
 func removeItemAtIndex(index: int):
+	print("removing")
 	slots[index] = HotbarSlot.new()
 
 func insertSlot(index: int, hotbarSlot: HotbarSlot):

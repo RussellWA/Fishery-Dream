@@ -2,7 +2,14 @@ extends CharacterBody2D
 
 signal unlock_fish(fish: String)
 
-var catfish_progress: int = 5
+# Progress
+var catfish_progress: int = 1
+var tilapia_progress: int = 2
+var gourami_progress: int = 3
+var pomfret_progress: int = 4
+var snakeHead_progress: int = 5
+var silverCatfish_progress: int = 6
+var belida_progress: int = 7
 
 @onready var money_label: Label = $"../CanvasLayer/Money"
 @onready var interaction_area: InteractionArea = $InteractionArea
@@ -97,6 +104,29 @@ func check_progress(fish: String, amount: int):
 	print("Fish: ", fish, "amount: ", amount)
 	if catfish_progress != 0 and fish == "catfish":
 		catfish_progress -= amount
-		print(catfish_progress)
 		if catfish_progress == 0: unlock_fish.emit("Tilapia")
+		return
+	elif tilapia_progress != 0 and fish == "tilapia":
+		tilapia_progress -= amount
+		if catfish_progress == 0: unlock_fish.emit("Tilapia")
+		return
+	elif gourami_progress != 0 and fish == "gourami":
+		gourami_progress -= amount
+		if catfish_progress == 0: unlock_fish.emit("Gourami")
+		return
+	elif pomfret_progress != 0 and fish == "pomfret":
+		pomfret_progress -= amount
+		if catfish_progress == 0: unlock_fish.emit("Pomfret")
+		return
+	elif snakeHead_progress != 0 and fish == "snakehead":
+		snakeHead_progress -= amount
+		if catfish_progress == 0: unlock_fish.emit("SnakeHead")
+		return
+	elif silverCatfish_progress != 0 and fish == "silvercatfish":
+		silverCatfish_progress -= amount
+		if catfish_progress == 0: unlock_fish.emit("SilverCatfish")
+		return
+	elif belida_progress != 0 and fish == "belida":
+		belida_progress -= amount
+		if catfish_progress == 0: unlock_fish.emit("Belida")
 		return

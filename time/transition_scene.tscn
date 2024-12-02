@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://nd431cgg4wk"]
+[gd_scene load_steps=7 format=3 uid="uid://nd431cgg4wk"]
 
 [ext_resource type="Script" path="res://time/transition_scene.gd" id="1_wwyhx"]
 
@@ -49,11 +49,28 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_ehlth"]
+resource_name = "fade_to_normal_2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.172549, 0.0470588, 1, 0.564706)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vuax6"]
 _data = {
 "RESET": SubResource("Animation_x7v1i"),
 "fade_to_black": SubResource("Animation_888hp"),
-"fade_to_normal": SubResource("Animation_hrhym")
+"fade_to_normal": SubResource("Animation_hrhym"),
+"fade_to_normal_2": SubResource("Animation_ehlth")
 }
 
 [node name="TransitionScene" type="CanvasLayer"]

@@ -1,6 +1,7 @@
+res://art/objects
+res://scenes
 res://art/titlescreen
 res://scripts
-res://scenes
 res://art/character
 res://time
 res://
@@ -8,5 +9,4 @@ res://interaction/interaction area
 res://gui
 res://font
 res://hotbar/seeds
-res://art/objects
 res://interaction

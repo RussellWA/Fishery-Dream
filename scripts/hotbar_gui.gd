@@ -94,14 +94,31 @@ func _on_pool_item_resource_send(item_resource):
 		heldItem = null
 		update_held_item.emit(null)
 
+func _on_pool_2_item_resource_send(item_resource):
+	heldItemResource = load(item_resource)
+	var itemAmount = int(heldItem.amountLabel.text) - 1
+	heldItem.amountLabel.text = str(itemAmount)
+	if itemAmount > 0:
+		hotbar.reduceAmount(heldItemResource)
+	else:
+		hotbar.removeSlot(heldItemResource)
+		remove_child(heldItem)
+		heldItem = null
+		update_held_item.emit(null)
+
 func _on_sell_gui_get_held_item(slot):
 	sell_held_item.emit(slot, heldItem)
 
 func _on_sell_gui_item_sold(fish):
 	remove_child(heldItem)
 	heldItem = null
+	print("time to sell" , fish)
 	hotbar.removeByName(fish)
 	update()
 
 func _on_pool_harvest_updated():
 	update()
+
+func _on_pool_2_harvest_updated():
+	update()
+

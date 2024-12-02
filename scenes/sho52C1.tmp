@@ -25,6 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_we4q8")
+player_hotbar_path = null
 metadata/_edit_horizontal_guides_ = [36.0, 122.0]
 metadata/_edit_vertical_guides_ = [157.0]
 
@@ -120,17 +121,17 @@ label_settings = SubResource("LabelSettings_wkq1l")
 horizontal_alignment = 1
 
 [node name="price" type="Label" parent="Info"]
-layout_mode = 0
 offset_left = 33.0
-offset_top = 42.0
+offset_top = 43.0
 offset_right = 42.0
-offset_bottom = 54.0
+offset_bottom = 55.0
 theme_override_fonts/font = SubResource("SystemFont_m1mqi")
 label_settings = SubResource("LabelSettings_wkq1l")
 
 [node name="coin" type="Sprite2D" parent="Info"]
-position = Vector2(25.875, 45.875)
-scale = Vector2(0.515625, 0.515625)
+visible = false
+position = Vector2(25.375, 46.375)
+scale = Vector2(0.578125, 0.578125)
 texture = ExtResource("7_2tb8l")
 
 [node name="Buy Button" type="Button" parent="."]

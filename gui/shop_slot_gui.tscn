@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://croxloqmvb5jk"]
+[gd_scene load_steps=4 format=3 uid="uid://croxloqmvb5jk"]
 
 [ext_resource type="Texture2D" uid="uid://witkqyu3sq3n" path="res://art/inventory/Slots Recolor-Sheet.png" id="1_ahj3g"]
+[ext_resource type="Texture2D" uid="uid://p1r2kx31qqcb" path="res://art/shop/Locked UI.png" id="2_2j8hf"]
 
 [sub_resource type="GDScript" id="GDScript_vosy8"]
 script/source = "extends Button
@@ -28,3 +29,6 @@ offset_bottom = 20.0
 layout_mode = 2
 
 [node name="item" type="Sprite2D" parent="CenterContainer/Panel"]
+
+[node name="locked" type="Sprite2D" parent="CenterContainer/Panel"]
+texture = ExtResource("2_2j8hf")

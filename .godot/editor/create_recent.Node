@@ -1,7 +1,8 @@
-AnimatedSprite2D
-Panel
-Sprite2D
+ColorRect
 CanvasLayer
+AnimatedSprite2D
+Sprite2D
+Panel
 AspectRatioContainer
 Node2D
 Camera2D
@@ -11,5 +12,3 @@ Control
 Button
 TextureRect
 AnimationPlayer
-DirectionalLight2D
-CollisionShape2D
