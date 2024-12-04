@@ -198,9 +198,9 @@ script = ExtResource("1_4gvda")
 metadata/_edit_vertical_guides_ = [-9.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -16.5714)
 sprite_frames = SubResource("SpriteFrames_7o7es")
 animation = &"walk_up"
+offset = Vector2(0, -16.571)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1

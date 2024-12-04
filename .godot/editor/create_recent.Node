@@ -1,7 +1,8 @@
+CollisionShape2D
+Sprite2D
 ColorRect
 CanvasLayer
 AnimatedSprite2D
-Sprite2D
 Panel
 AspectRatioContainer
 Node2D
@@ -11,4 +12,3 @@ VideoStreamPlayer
 Control
 Button
 TextureRect
-AnimationPlayer

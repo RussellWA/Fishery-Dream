@@ -1,11 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5s7soqr8eb4p"]
+[gd_scene load_steps=3 format=3 uid="uid://b5s7soqr8eb4p"]
 
 [ext_resource type="Script" path="res://interaction/InteractionManager.gd" id="1_m0kdy"]
+[ext_resource type="Texture2D" uid="uid://bxfmnkkolviki" path="res://art/hud/E Button.png" id="2_gg44x"]
 
 [node name="InteractionManager" type="Node2D"]
 script = ExtResource("1_m0kdy")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(-2.38419e-07, -2.38419e-07)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_gg44x")
+
 [node name="Label" type="Label" parent="."]
+visible = false
 z_index = 20
 anchors_preset = 5
 anchor_left = 0.5

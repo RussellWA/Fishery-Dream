@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dp2hg4fomobs2"]
+[gd_scene load_steps=6 format=3 uid="uid://dp2hg4fomobs2"]
 
 [ext_resource type="Script" path="res://scripts/house.gd" id="1_8pm8a"]
 [ext_resource type="Texture2D" uid="uid://cuwo5f55w2fp4" path="res://art/objects/House fixed.png" id="2_wlljj"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i076n"]
 size = Vector2(17, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtvbv"]
+size = Vector2(78, 26)
 
 [node name="house" type="StaticBody2D"]
 script = ExtResource("1_8pm8a")
@@ -19,3 +22,7 @@ action_name = "toggle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2"]
 position = Vector2(0.5, 35.5)
 shape = SubResource("RectangleShape2D_i076n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 35)
+shape = SubResource("RectangleShape2D_dtvbv")

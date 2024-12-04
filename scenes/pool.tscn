@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bsrwxommesx8i"]
+[gd_scene load_steps=23 format=3 uid="uid://bsrwxommesx8i"]
 
 [ext_resource type="Texture2D" uid="uid://0b2yp1aafic7" path="res://art/objects/Pool.png" id="1_4qa5o"]
 [ext_resource type="Script" path="res://scripts/pool.gd" id="1_x11aq"]
@@ -111,19 +111,27 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goxt0"]
+size = Vector2(64, 16)
+
 [node name="Pool" type="StaticBody2D"]
 script = ExtResource("1_x11aq")
+metadata/_edit_vertical_guides_ = [-32.0, 32.0]
+metadata/_edit_horizontal_guides_ = [-17.0, -23.8, 16.0, -17.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -0.503376)
 sprite_frames = SubResource("SpriteFrames_fyrkn")
 animation = &"empty"
 
 [node name="ClickArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
 shape = SubResource("RectangleShape2D_ps487")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_18f1d")]
+visible = false
 action_name = "toggle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
@@ -153,6 +161,10 @@ position = Vector2(15, 14)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_tgs7s")
 frame_progress = 0.620057
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_goxt0")
 
 [connection signal="input_event" from="ClickArea" to="." method="_on_click_area_input_event"]
 [connection signal="mouse_entered" from="ClickArea" to="." method="_on_click_area_mouse_entered"]

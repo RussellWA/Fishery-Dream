@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b21jw7vuel8pj"]
+[gd_scene load_steps=6 format=3 uid="uid://b21jw7vuel8pj"]
 
 [ext_resource type="Script" path="res://scripts/crate.gd" id="1_w6pr7"]
 [ext_resource type="Texture2D" uid="uid://dyamm4dljdqph" path="res://art/objects/Crate2.png" id="2_2dkgm"]
 [ext_resource type="PackedScene" uid="uid://dblpab3x2hn1s" path="res://interaction/interaction area/interaction.tscn" id="3_sj8ag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewmhl"]
-size = Vector2(38, 34)
+size = Vector2(36, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl8qt"]
+size = Vector2(31, 14)
 
 [node name="Crate" type="StaticBody2D"]
 script = ExtResource("1_w6pr7")
@@ -19,5 +22,9 @@ action_name = "toggle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2"]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_ewmhl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.958332, 7)
+shape = SubResource("RectangleShape2D_kl8qt")
 
 [connection signal="area_enter" from="InteractionArea2" to="." method="_on_interaction_area_2_area_enter"]

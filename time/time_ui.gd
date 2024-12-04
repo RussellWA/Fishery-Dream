@@ -9,7 +9,7 @@ extends Control
 func _on_time_system_time_updated(date_time: DateTime) -> void:
 	update_label(days_label, date_time.days, false)
 	update_label(hours_label, date_time.hours)
-	update_label(minutes_label, date_time.minutes)
+	update_label(minutes_label, floor(date_time.minutes / 10) * 10)
 	update_icon(date_time.hours)
 
 func add_leading_zero(label: Label, value: int) -> void:
