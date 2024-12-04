@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cb10ol5mymmvm"]
+[gd_scene load_steps=36 format=3 uid="uid://cb10ol5mymmvm"]
 
 [ext_resource type="PackedScene" uid="uid://bfc6d1hc3y7ro" path="res://scenes/player.tscn" id="1_e3m6d"]
 [ext_resource type="Texture2D" uid="uid://e47hfx4sbv84" path="res://art/tileset/grass and dirt.png" id="1_hd8dm"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://bsrwxommesx8i" path="res://scenes/pool.tscn" id="14_f7nio"]
 [ext_resource type="PackedScene" uid="uid://b21jw7vuel8pj" path="res://scenes/crate.tscn" id="16_arjgm"]
 [ext_resource type="PackedScene" uid="uid://dp2hg4fomobs2" path="res://scenes/house.tscn" id="19_0xmrc"]
+[ext_resource type="AudioStream" uid="uid://dkhva78snpub8" path="res://music/Digimon World OST - File City (Day).mp3" id="23_k6wyx"]
+[ext_resource type="AudioStream" uid="uid://7c7wu84g24g1" path="res://music/Digimon World OST - File City (Night).mp3" id="24_it4kn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqmqa"]
 texture = ExtResource("1_hd8dm")
@@ -521,6 +523,17 @@ minutes = 0
 hours = 6
 days = 1
 
+[sub_resource type="Gradient" id="Gradient_6ls4f"]
+colors = PackedColorArray(0.947234, 0.955891, 1, 1, 1, 1, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dqpw3"]
+gradient = SubResource("Gradient_6ls4f")
+width = 279
+height = 194
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.504274, 0.5)
+
 [sub_resource type="LabelSettings" id="LabelSettings_hltyq"]
 font = ExtResource("5_41f18")
 font_size = 6
@@ -574,15 +587,24 @@ z_index = 1
 y_sort_enabled = true
 position = Vector2(312, 40)
 
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(82, 24)
+energy = 0.21
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_dqpw3")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
 
 [node name="day_night" parent="CanvasLayer" instance=ExtResource("8_03y5k")]
 
-[node name="TimeLayer" type="CanvasLayer" parent="CanvasLayer"]
+[node name="OverlayLayer" type="CanvasLayer" parent="CanvasLayer"]
 layer = 3
 
-[node name="TimeGui" parent="CanvasLayer/TimeLayer" instance=ExtResource("12_7sexq")]
+[node name="TimeGui" parent="CanvasLayer/OverlayLayer" instance=ExtResource("12_7sexq")]
 z_index = 0
 anchors_preset = 1
 anchor_left = 1.0
@@ -591,6 +613,11 @@ offset_left = -64.0
 offset_right = 0.0
 offset_bottom = 54.0
 grow_horizontal = 0
+
+[node name="Gold" type="Sprite2D" parent="CanvasLayer/OverlayLayer"]
+position = Vector2(11, 10)
+scale = Vector2(0.8125, 0.8125)
+texture = ExtResource("5_0u203")
 
 [node name="TransitionScene" parent="CanvasLayer" instance=ExtResource("8_encvb")]
 layer = 2
@@ -605,11 +632,6 @@ offset_left = -30.08
 offset_top = -58.04
 offset_right = 30.92
 offset_bottom = 8.95996
-
-[node name="Gold" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(11, 10)
-scale = Vector2(0.8125, 0.8125)
-texture = ExtResource("5_0u203")
 
 [node name="Money" type="Label" parent="CanvasLayer"]
 offset_left = 21.0
@@ -662,7 +684,15 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.172549, 0.0784314, 0.435294, 0.529412)
 
-[connection signal="changeDay" from="." to="CanvasLayer/TimeLayer/TimeGui" method="_on_world_change_day"]
+[node name="DayMusic" type="AudioStreamPlayer2D" parent="."]
+z_index = 3
+stream = ExtResource("23_k6wyx")
+
+[node name="NightMusic" type="AudioStreamPlayer2D" parent="."]
+z_index = 3
+stream = ExtResource("24_it4kn")
+
+[connection signal="changeDay" from="." to="CanvasLayer/OverlayLayer/TimeGui" method="_on_world_change_day"]
 [connection signal="cycle" from="." to="CanvasLayer/day_night" method="_on_world_cycle"]
 [connection signal="fade" from="." to="CanvasLayer/TransitionScene" method="_on_world_fade"]
 [connection signal="first" from="." to="CanvasLayer/day_night" method="_on_world_first"]
@@ -670,7 +700,7 @@ color = Color(0.172549, 0.0784314, 0.435294, 0.529412)
 [connection signal="sendDay" from="." to="Pool" method="_on_world_send_day"]
 [connection signal="sendDay" from="." to="Pool2" method="_on_world_send_day"]
 [connection signal="unlock_fish" from="player" to="CanvasLayer/Shop" method="_on_player_unlock_fish"]
-[connection signal="time_updated" from="TimeSystem" to="CanvasLayer/TimeLayer/TimeGui" method="_on_time_system_time_updated"]
+[connection signal="time_updated" from="TimeSystem" to="CanvasLayer/OverlayLayer/TimeGui" method="_on_time_system_time_updated"]
 [connection signal="getDay" from="Pool" to="." method="_on_pool_get_day"]
 [connection signal="harvest_updated" from="Pool" to="CanvasLayer/HotbarGui" method="_on_pool_harvest_updated"]
 [connection signal="item_resource_send" from="Pool" to="CanvasLayer/HotbarGui" method="_on_pool_item_resource_send"]

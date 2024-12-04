@@ -9,3 +9,9 @@ res://interaction/InteractionManager.tscn
 res://scenes/house.tscn
 res://scenes/crate.tscn
 res://scenes/cutscene.tscn
+res://scripts/world.gd
+res://scenes/title_screen.tscn
+res://scripts/cutscene.gd
+res://scripts/title_screen.gd
+res://scripts/house.gd
+res://scripts/pool.gd

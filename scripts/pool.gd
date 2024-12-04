@@ -37,11 +37,7 @@ func _ready():
 	interaction_area.interact = Callable(self, "_open_ui")
 	get_parent().sendDay.connect(_on_world_send_day)
 
-func check_signal_status():
-	print("Signal connected? ", click_area.input_event.is_connected(_on_click_area_input_event))
-
 func _open_ui():
-	check_signal_status()
 	if(curr_fish != "empty" and end_day <= curr_day):
 		var item_data = items.filter(func(item): return item["name"].to_lower() == curr_fish)
 		var hotbar_item = item_data[0]

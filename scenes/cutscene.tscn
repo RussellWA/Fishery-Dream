@@ -11,18 +11,28 @@ script = ExtResource("1_agf0x")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer"]
+z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = SubResource("VideoStreamTheora_2urt3")
+volume_db = 6.82
 expand = true
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 visible = false
-anchors_preset = 15
-anchor_right = 1.0
+z_index = 1
+anchors_preset = 2
+anchor_top = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_top = -23.0
+offset_right = 56.0
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 2078.0
+offset_bottom = 1133.0
+color = Color(0, 0, 0, 1)

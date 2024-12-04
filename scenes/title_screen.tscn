@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cr7oqsi6kn80o"]
+[gd_scene load_steps=16 format=3 uid="uid://cr7oqsi6kn80o"]
 
 [ext_resource type="Texture2D" uid="uid://dt1ldyuwlf0ty" path="res://art/titlescreen/title screen.png" id="1_2iqhf"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_cg8g0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c8nw304mya7am" path="res://art/titlescreen/Setting Button.png" id="4_p0ju0"]
 [ext_resource type="Texture2D" uid="uid://brohuyakmtm1x" path="res://art/titlescreen/Exit Button.png" id="5_wvelv"]
 [ext_resource type="Texture2D" uid="uid://cgdhqo1ik4g3k" path="res://art/titlescreen/fishery dream logo.png" id="6_nwuuk"]
+[ext_resource type="Texture2D" uid="uid://dcpja6qu1scp6" path="res://art/titlescreen/Logo Perusahaan@4x.png" id="7_pe8bl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0dwa"]
 atlas = ExtResource("1_2iqhf")
@@ -26,16 +27,16 @@ region = Rect2(720, 0, 240, 135)
 [sub_resource type="SpriteFrames" id="SpriteFrames_angk1"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_x0dwa")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_rgod5")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_0rkxi")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_d2fay")
 }],
 "loop": true,
@@ -43,21 +44,49 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_hhpyw"]
+resource_name = "logo"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CanvasLayer2/Control/logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3.7, 5.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2pkvr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CanvasLayer2/Control/logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b66fk"]
+_data = {
+"RESET": SubResource("Animation_2pkvr"),
+"logo": SubResource("Animation_hhpyw")
+}
+
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_cg8g0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
-
-[node name="Background" type="TextureRect" parent="CanvasLayer"]
 visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_2iqhf")
-expand_mode = 2
 
 [node name="StartBtn" type="Button" parent="CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0)
@@ -133,9 +162,41 @@ texture = ExtResource("6_nwuuk")
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer"]
+visible = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/CanvasLayer"]
 position = Vector2(167.974, 95.25)
 scale = Vector2(1.3966, 1.4037)
 sprite_frames = SubResource("SpriteFrames_angk1")
 frame_progress = 0.470048
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer2/Control"]
+root_node = NodePath("../../../CanvasLayer")
+libraries = {
+"": SubResource("AnimationLibrary_b66fk")
+}
+
+[node name="logo" type="Sprite2D" parent="CanvasLayer2/Control"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+scale = Vector2(0.078, 0.078)
+texture = ExtResource("7_pe8bl")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/Control"]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 970.0
+offset_bottom = 553.0

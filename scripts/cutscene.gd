@@ -12,6 +12,7 @@ func _ready():
 
 func load_world():
 	video_finished = true
+	$CanvasLayer/ColorRect.visible = true
 	label.text = "Press any key to continue..."
 	label.visible = true
 

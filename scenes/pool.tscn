@@ -125,13 +125,11 @@ sprite_frames = SubResource("SpriteFrames_fyrkn")
 animation = &"empty"
 
 [node name="ClickArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
 shape = SubResource("RectangleShape2D_ps487")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_18f1d")]
-visible = false
 action_name = "toggle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
