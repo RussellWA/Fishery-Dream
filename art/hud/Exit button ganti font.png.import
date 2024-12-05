@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t708fux1xx28"
-path="res://.godot/imported/Exit Button Pause.png-25c906400612ba81f1834bbd90682d78.ctex"
+uid="uid://dpqujwf8bmd2e"
+path="res://.godot/imported/Exit button ganti font.png-76384aa2af87bd6a53786e91cffb6fcb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/hud/Exit Button Pause.png"
-dest_files=["res://.godot/imported/Exit Button Pause.png-25c906400612ba81f1834bbd90682d78.ctex"]
+source_file="res://art/hud/Exit button ganti font.png"
+dest_files=["res://.godot/imported/Exit button ganti font.png-76384aa2af87bd6a53786e91cffb6fcb.ctex"]
 
 [params]
 

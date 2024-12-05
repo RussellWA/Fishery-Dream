@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8nw304mya7am"
-path="res://.godot/imported/Setting Button.png-55bead96852779b1951d45c2d0f345f1.ctex"
+uid="uid://ccnptkb1s7tlv"
+path="res://.godot/imported/Start button ganti font.png-5060b818076e0b4da7882b4a4379293d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/titlescreen/Setting Button.png"
-dest_files=["res://.godot/imported/Setting Button.png-55bead96852779b1951d45c2d0f345f1.ctex"]
+source_file="res://art/titlescreen/Start button ganti font.png"
+dest_files=["res://.godot/imported/Start button ganti font.png-5060b818076e0b4da7882b4a4379293d.ctex"]
 
 [params]
 

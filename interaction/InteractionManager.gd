@@ -20,11 +20,11 @@ func unregister_area(area: InteractionArea):
 func _process(delta):
 	if active_areas.size() > 0 and can_interact:
 		active_areas.sort_custom(_sort_by_distance_to_player)
-		# Update sprite position to be below the interaction area
-		sprite.global_position = active_areas[0].global_position
+		var area_position = active_areas[0].global_position
+		#sprite.global_position = active_areas[0].global_position
+		sprite.global_position = Vector2(area_position.x, area_position.y + 25)
 		sprite.visible = true
 	else:
-		#label.hide() 
 		sprite.visible = false
 	
 func _sort_by_distance_to_player(area1, area2):

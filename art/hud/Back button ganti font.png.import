@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmjnmx0et4g5m"
-path="res://.godot/imported/Pause Button.png-3317db45523f611c42bf20bf574e165c.ctex"
+uid="uid://b62n2iiso0pfn"
+path="res://.godot/imported/Back button ganti font.png-4d21020d05a6f909cb784954bbfbd7f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/time/Pause Button.png"
-dest_files=["res://.godot/imported/Pause Button.png-3317db45523f611c42bf20bf574e165c.ctex"]
+source_file="res://art/hud/Back button ganti font.png"
+dest_files=["res://.godot/imported/Back button ganti font.png-4d21020d05a6f909cb784954bbfbd7f8.ctex"]
 
 [params]
 

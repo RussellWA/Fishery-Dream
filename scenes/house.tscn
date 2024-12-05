@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dblpab3x2hn1s" path="res://interaction/interaction area/interaction.tscn" id="3_xtxi5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i076n"]
-size = Vector2(17, 28)
+size = Vector2(17, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtvbv"]
 size = Vector2(78, 26)
@@ -20,7 +20,7 @@ texture = ExtResource("2_wlljj")
 action_name = "toggle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2"]
-position = Vector2(0.5, 37)
+position = Vector2(0.5, 50)
 shape = SubResource("RectangleShape2D_i076n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

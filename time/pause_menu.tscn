@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://coeke6xfw006r"]
+
+[ext_resource type="Script" path="res://time/pause_menu.gd" id="1_xdiwi"]
+[ext_resource type="Texture2D" uid="uid://damfshlkw1snm" path="res://art/titlescreen/Setting button ganti font.png" id="2_iwfmm"]
+[ext_resource type="Texture2D" uid="uid://dpqujwf8bmd2e" path="res://art/hud/Exit button ganti font.png" id="3_n46xy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d4jcf"]
+load_path = "res://.godot/imported/Continue Button.png-d67a286066e62ba9876a45312cd37129.ctex"
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.557
+anchor_bottom = 0.589
+offset_right = -109.44
+offset_bottom = -96.1201
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xdiwi")
+
+[node name="ContinueBtn" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_top = -32.0
+offset_right = 90.0
+offset_bottom = -1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ContinueBtn"]
+position = Vector2(45, 15.4783)
+texture = SubResource("CompressedTexture2D_d4jcf")
+metadata/_edit_lock_ = true
+
+[node name="SettingsBtn" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+offset_left = -1.0
+offset_top = 15.0
+offset_right = 89.0
+offset_bottom = 46.0
+
+[node name="Sprite2D" type="Sprite2D" parent="SettingsBtn"]
+position = Vector2(45, 16)
+scale = Vector2(1.58621, 1.45455)
+texture = ExtResource("2_iwfmm")
+metadata/_edit_lock_ = true
+
+[node name="ExitBtn" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_top = 64.0
+offset_right = 90.0
+offset_bottom = 95.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ExitBtn"]
+position = Vector2(44.9999, 15.5)
+scale = Vector2(1.55172, 1.40909)
+texture = ExtResource("3_n46xy")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 0.627451, 0, 1)
+self_modulate = Color(1, 1, 1, 0.215686)
+layout_mode = 0
+offset_left = -1020.0
+offset_top = -540.0
+offset_right = 1068.0
+offset_bottom = 619.0
+mouse_filter = 2

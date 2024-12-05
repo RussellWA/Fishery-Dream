@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6t7smfxnhx7n"]
+
+[ext_resource type="Script" path="res://titlescreen/settings_menu.gd" id="1_ws3rg"]
+[ext_resource type="Texture2D" uid="uid://b62n2iiso0pfn" path="res://art/hud/Back button ganti font.png" id="2_pyv4k"]
+
+[sub_resource type="Theme" id="Theme_whfh1"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.579
+anchor_bottom = 0.674
+offset_right = -151.68
+offset_bottom = -187.92
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ws3rg")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = -72.0
+offset_top = -57.0
+offset_right = -27.0
+offset_bottom = -37.0
+
+[node name="BackButton" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -118.0
+offset_top = 79.0
+offset_right = -36.0
+offset_bottom = 110.0
+text = "Back"
+
+[node name="Sprite2D" type="Sprite2D" parent="BackButton"]
+position = Vector2(-47.1364, 15.5)
+scale = Vector2(1.40909, 1.40909)
+texture = ExtResource("2_pyv4k")
+
+[node name="Volume" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = -57.0
+offset_top = 29.0
+offset_right = 53.0
+offset_bottom = 45.0
+theme = SubResource("Theme_whfh1")
