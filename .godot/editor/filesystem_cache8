@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1733417968
+::res://::1733420035
 ::res://art/::1733417968
 ::res://art/character/::1732722204
 New_Chara_Design_Outline_shadow_5.png::CompressedTexture2D::2781493596940242026::1732721704::1732721704::1::::<><>::
@@ -107,17 +107,17 @@ interaction.tscn::PackedScene::7253069901762750722::1730817885::0::1::::<><>::re
 Digimon World OST - File City (Day).mp3::AudioStreamMP3::7876877921147714267::1733325881::1733330163::1::::<><>::
 Digimon World OST - File City (Night).mp3::AudioStreamMP3::2252155085931879282::1733326757::1733330160::1::::<><>::
 splash.mp3::AudioStreamMP3::1801977814102589623::1733416666::1733416666::1::::<><>::
-::res://scenes/::1733418964
+::res://scenes/::1733419702
 crate.tscn::PackedScene::4335780738028957667::1733328313::0::1::::<><>::res://scripts/crate.gd<>uid://dyamm4dljdqph::::res://art/objects/Crate2.png<>uid://dblpab3x2hn1s::::res://interaction/interaction area/interaction.tscn
-cutscene.tscn::PackedScene::7060836540413375226::1733418964::0::1::::<><>::res://scripts/cutscene.gd
+cutscene.tscn::PackedScene::7060836540413375226::1733419702::0::1::::<><>::res://scripts/cutscene.gd
 house.tscn::PackedScene::8268270170276057779::1733418216::0::1::::<><>::res://scripts/house.gd<>uid://cuwo5f55w2fp4::::res://art/objects/House fixed.png<>uid://dblpab3x2hn1s::::res://interaction/interaction area/interaction.tscn
-player.tscn::PackedScene::2743382618098861392::1733418964::0::1::::<><>::res://scripts/player.gd<>uid://bfvm175mw1nlq::::res://art/character/New_Chara_Design_Outline_shadow_5.png<>res://interaction/interaction area/interaction.gd
+player.tscn::PackedScene::2743382618098861392::1733419702::0::1::::<><>::res://scripts/player.gd<>uid://bfvm175mw1nlq::::res://art/character/New_Chara_Design_Outline_shadow_5.png<>res://interaction/interaction area/interaction.gd
 pool.tscn::PackedScene::3686291892513235606::1733418217::0::1::::<><>::uid://0b2yp1aafic7::::res://art/objects/Pool.png<>res://scripts/pool.gd<>uid://dblpab3x2hn1s::::res://interaction/interaction area/interaction.tscn<>uid://ds04ivxt6apfx::::res://art/objects/pool with fish-Sheet.png<>uid://b068h3i43bn4i::::res://art/shop/sell ui.png<>uid://cnl518kskv6m8::::res://art/objects/Exclamation Mark.png
 sell.tscn::PackedScene::1940139546207137217::1730386094::0::1::::<><>::uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn
 sell_button.tscn::PackedScene::1608562005094916224::1730386094::0::1::::<><>::res://scripts/shop_button.gd
 shop.tscn::PackedScene::956099976320686284::1733153792::0::1::::<><>::res://scripts/shop.gd<>uid://croxloqmvb5jk::::res://gui/shop_slot_gui.tscn<>uid://cqn4y8hogyffv::::res://art/shop/Shop UI.png<>uid://b1qim3xstfkgf::::res://art/shop/Shop Sign.png<>uid://dwdi70ssgml3c::::res://art/shop/UI Recolor.png<>uid://chmcl5ak4qe8q::::res://font/nokiafc22.ttf<>uid://c0p75gv0mw0l2::::res://art/shop/gold.png<>uid://balrbx47tmit6::::res://art/shop/Wood Sign Locked.png<>uid://dcutwq4y0bdr3::::res://art/shop/Wood Sign Buy.png
 shop_button.tscn::PackedScene::808668581828611618::1733145312::0::1::::<><>::res://scripts/shop_button.gd<>uid://8nfgj2td41l1::::res://art/shop/shop button recolor.png
-world.tscn::PackedScene::4898247583242386278::1733418964::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://r5soraede3ir::::res://art/tileset/dirt_roads.png<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://ibuyr54rj6g1::::res://art/objects/plot and pool sheet.png<>uid://c0p75gv0mw0l2::::res://art/shop/gold.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>uid://dykan3g6kkn2j::::res://art/tileset/Fences.png<>uid://ib3t3xylcqrw::::res://art/tileset/Oak_Tree-export.png<>uid://nve3d6lx23wi::::res://scenes/shop.tscn<>uid://p7mhy7ixuiqh::::res://time/day_night.tscn<>uid://nd431cgg4wk::::res://time/transition_scene.tscn<>uid://lrywhla652aw::::res://scenes/shop_button.tscn<>res://time/time_system.gd<>res://time/date_time.gd<>uid://bgntqorkwwows::::res://time/time_ui.tscn<>uid://ce1b07dnnq8vp::::res://gui/sell_gui.tscn<>uid://bsrwxommesx8i::::res://scenes/pool.tscn<>uid://b21jw7vuel8pj::::res://scenes/crate.tscn<>uid://dp2hg4fomobs2::::res://scenes/house.tscn<>res://scripts/pause_button.gd<>uid://dkhva78snpub8::::res://music/Digimon World OST - File City (Day).mp3<>uid://dmjnmx0et4g5m::::res://art/hud/Pause Button.png<>uid://coeke6xfw006r::::res://time/pause_menu.tscn<>uid://7c7wu84g24g1::::res://music/Digimon World OST - File City (Night).mp3<>uid://c6t7smfxnhx7n::::res://titlescreen/settings_menu.tscn
+world.tscn::PackedScene::4898247583242386278::1733419701::0::1::::<><>::uid://bfc6d1hc3y7ro::::res://scenes/player.tscn<>uid://e47hfx4sbv84::::res://art/tileset/grass and dirt.png<>res://scripts/world.gd<>uid://r5soraede3ir::::res://art/tileset/dirt_roads.png<>uid://vectp8svax6n::::res://art/tileset/grasssss.png<>uid://ibuyr54rj6g1::::res://art/objects/plot and pool sheet.png<>uid://c0p75gv0mw0l2::::res://art/shop/gold.png<>uid://dvhtybg3s6k2g::::res://font/8-bit-hud.ttf<>uid://dy276ihu86qi0::::res://gui/hotbar_gui.tscn<>uid://dykan3g6kkn2j::::res://art/tileset/Fences.png<>uid://ib3t3xylcqrw::::res://art/tileset/Oak_Tree-export.png<>uid://nve3d6lx23wi::::res://scenes/shop.tscn<>uid://p7mhy7ixuiqh::::res://time/day_night.tscn<>uid://nd431cgg4wk::::res://time/transition_scene.tscn<>uid://lrywhla652aw::::res://scenes/shop_button.tscn<>res://time/time_system.gd<>res://time/date_time.gd<>uid://bgntqorkwwows::::res://time/time_ui.tscn<>uid://ce1b07dnnq8vp::::res://gui/sell_gui.tscn<>uid://bsrwxommesx8i::::res://scenes/pool.tscn<>uid://b21jw7vuel8pj::::res://scenes/crate.tscn<>uid://dp2hg4fomobs2::::res://scenes/house.tscn<>res://scripts/pause_button.gd<>uid://dkhva78snpub8::::res://music/Digimon World OST - File City (Day).mp3<>uid://dmjnmx0et4g5m::::res://art/hud/Pause Button.png<>uid://coeke6xfw006r::::res://time/pause_menu.tscn<>uid://7c7wu84g24g1::::res://music/Digimon World OST - File City (Night).mp3<>uid://c6t7smfxnhx7n::::res://titlescreen/settings_menu.tscn
 ::res://scripts/::1733414779
 button.gd::GDScript::-1::1729262334::0::1::::<>Button<>::
 close_sell_button.gd::GDScript::-1::1732120122::0::1::::<>Button<>::
@@ -131,21 +131,21 @@ pool.gd::GDScript::-1::1733329766::0::1::::<>StaticBody2D<>::
 shop.gd::GDScript::-1::1733148420::0::1::::Shop<>Control<>::
 shop_button.gd::GDScript::-1::1733150160::0::1::::<>Button<>::
 world.gd::GDScript::-1::1733330357::0::1::::<>Node2D<>::
-::res://time/::1733419160
+::res://time/::1733419702
 date_time.gd::GDScript::-1::1731860151::0::1::::DateTime<>Resource<>::
 day_night.gd::GDScript::-1::1733153319::0::1::::<>CanvasLayer<>::
 day_night.tscn::PackedScene::1119635157560090199::1733328313::0::1::::<><>::res://time/day_night.gd
-pause_menu.gd::GDScript::-1::1733418960::0::1::::<>Control<>::
-pause_menu.tscn::PackedScene::5764358666450123931::1733419160::0::1::::<><>::res://time/pause_menu.gd<>uid://c8nw304mya7am::::res://art/titlescreen/Setting Button.png<>uid://dpqujwf8bmd2e::::res://art/hud/Exit button ganti font.png
+pause_menu.gd::GDScript::-1::1733419701::0::1::::<>Control<>::
+pause_menu.tscn::PackedScene::5764358666450123931::1733419702::0::1::::<><>::res://time/pause_menu.gd<>uid://damfshlkw1snm::::res://art/titlescreen/Setting button ganti font.png<>uid://dpqujwf8bmd2e::::res://art/hud/Exit button ganti font.png
 time_system.gd::GDScript::-1::1732198039::0::1::::TimeSystem<>Node<>::
 time_ui.gd::GDScript::-1::1733322051::0::1::::<>Control<>::
 time_ui.tscn::PackedScene::2835573613962325958::1732115264::0::1::::<><>::res://time/time_ui.gd<>uid://dx4lrfsd3b2tq::::res://art/time/Clock Systems.png<>uid://d1l33in81mqsh::::res://font/clock_label_settings.tres<>uid://d31ajh7fpxvq7::::res://art/time/Clock_Systems-export.png
 transition_scene.gd::GDScript::-1::1733153424::0::1::::<>CanvasLayer<>::
 transition_scene.tscn::PackedScene::27072360722196282::1733328313::0::1::::<><>::res://time/transition_scene.gd
-::res://titlescreen/::1733419249
+::res://titlescreen/::1733419702
 settings_menu.gd::GDScript::-1::1733417451::0::1::::<>Control<>::
-settings_menu.tscn::PackedScene::6989894424618070481::1733418964::0::1::::<><>::res://titlescreen/settings_menu.gd
+settings_menu.tscn::PackedScene::6989894424618070481::1733419702::0::1::::<><>::res://titlescreen/settings_menu.gd<>uid://b62n2iiso0pfn::::res://art/hud/Back button ganti font.png
 title_screen.gd::GDScript::-1::1733418204::0::1::::<>Node2D<>::
-title_screen.tscn::PackedScene::6032991367165023692::1733419249::0::1::::<><>::res://titlescreen/title_screen.gd<>uid://ccnptkb1s7tlv::::res://art/titlescreen/Start button ganti font.png<>uid://damfshlkw1snm::::res://art/titlescreen/Setting button ganti font.png<>uid://c84r2nv44nr80::::res://art/titlescreen/Exit button ganti font.png<>uid://cgdhqo1ik4g3k::::res://art/titlescreen/fishery dream logo.png<>uid://dt1ldyuwlf0ty::::res://art/titlescreen/title screen.png<>uid://dcpja6qu1scp6::::res://art/titlescreen/Logo Perusahaan@4x.png<>uid://c6t7smfxnhx7n::::res://titlescreen/settings_menu.tscn<>uid://0w5kt5mfsttf::::res://music/splash.mp3
+title_screen.tscn::PackedScene::6032991367165023692::1733419702::0::1::::<><>::res://titlescreen/title_screen.gd<>uid://ccnptkb1s7tlv::::res://art/titlescreen/Start button ganti font.png<>uid://damfshlkw1snm::::res://art/titlescreen/Setting button ganti font.png<>uid://c84r2nv44nr80::::res://art/titlescreen/Exit button ganti font.png<>uid://cgdhqo1ik4g3k::::res://art/titlescreen/fishery dream logo.png<>uid://dt1ldyuwlf0ty::::res://art/titlescreen/title screen.png<>uid://dcpja6qu1scp6::::res://art/titlescreen/Logo Perusahaan@4x.png<>uid://c6t7smfxnhx7n::::res://titlescreen/settings_menu.tscn<>uid://0w5kt5mfsttf::::res://music/splash.mp3
 ::res://video/::1733323322
 Sequence-01.ogv::VideoStreamTheora::-1::1733323322::0::1::::<><>::

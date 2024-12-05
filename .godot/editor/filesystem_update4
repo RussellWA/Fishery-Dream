@@ -2,20 +2,8 @@ res://scenes/world.tscn
 res://hotbar/player_hotbar.tres
 res://font/clock_label_settings.tres
 res://scenes/player.tscn
-res://interaction/InteractionManager.tscn
-res://scenes/house.tscn
 res://scenes/cutscene.tscn
-res://scenes/title_screen.tscn
-res://scenes/pool.tscn
-res://time/pause_menu.tscn
-res://scripts/pause_button.gd
-res://time/pause_menu.gd
-res://interaction/interaction area/crate_interaction.gd
-res://interaction/InteractionManager.gd
-res://art/titlescreen/settings_menu.gd
-res://art/titlescreen/settings_menu.tscn
-res://scenes/settings_menu.tscn
 res://titlescreen/title_screen.tscn
-res://titlescreen/title_screen.gd
 res://titlescreen/settings_menu.tscn
-res://titlescreen/settings_menu.gd
+res://time/pause_menu.tscn
+res://time/pause_menu.gd

@@ -16,11 +16,13 @@ func _continue_button_pressed():
 	time_system.toggle_time_pause()
 	shop_btn.disabled = false
 	$".".visible = false
+	$"../PauseButton".disabled = false
 
 func _settings_button_pressed():
 	$".".visible = false
 	$"../SettingsMenu".visible = true
 	$"../SettingsBkg".visible = true
+	$"../PauseButton".disabled = true
 
 func _exit_button_pressed():
 	get_tree().quit()
