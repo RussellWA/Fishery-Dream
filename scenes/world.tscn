@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cb10ol5mymmvm"]
+[gd_scene load_steps=38 format=3 uid="uid://cb10ol5mymmvm"]
 
 [ext_resource type="PackedScene" uid="uid://bfc6d1hc3y7ro" path="res://scenes/player.tscn" id="1_e3m6d"]
 [ext_resource type="Texture2D" uid="uid://e47hfx4sbv84" path="res://art/tileset/grass and dirt.png" id="1_hd8dm"]
@@ -527,17 +527,6 @@ minutes = 0
 hours = 6
 days = 1
 
-[sub_resource type="Gradient" id="Gradient_6ls4f"]
-colors = PackedColorArray(0.947234, 0.955891, 1, 1, 1, 1, 0, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_dqpw3"]
-gradient = SubResource("Gradient_6ls4f")
-width = 279
-height = 194
-use_hdr = true
-fill = 1
-fill_from = Vector2(0.504274, 0.5)
-
 [sub_resource type="LabelSettings" id="LabelSettings_hltyq"]
 font = ExtResource("5_41f18")
 font_size = 6
@@ -590,15 +579,6 @@ position = Vector2(379, 77)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(312, 40)
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-visible = false
-position = Vector2(82, 24)
-energy = 0.21
-shadow_enabled = true
-shadow_color = Color(0, 0, 0, 1)
-shadow_filter = 1
-texture = SubResource("GradientTexture2D_dqpw3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -767,4 +747,6 @@ volume_db = -10.0
 [connection signal="update_held_item" from="CanvasLayer/HotbarGui" to="Pool" method="_on_hotbar_gui_update_held_item"]
 [connection signal="update_held_item" from="CanvasLayer/HotbarGui" to="Pool2" method="_on_hotbar_gui_update_held_item"]
 [connection signal="pause_anim" from="CanvasLayer/ShopButton" to="CanvasLayer/day_night" method="_on_shop_button_pause_anim"]
+[connection signal="disable" from="CanvasLayer/PauseMenu" to="CanvasLayer/Shop" method="_on_pause_menu_disable"]
+[connection signal="disable" from="CanvasLayer/PauseButton" to="CanvasLayer/Shop" method="_on_pause_button_disable"]
 [connection signal="backTo" from="CanvasLayer/SettingsMenu" to="CanvasLayer/PauseMenu" method="_on_settings_menu_back_to"]

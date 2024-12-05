@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_agf0x"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_2urt3"]
-file = "res://video/Sequence-01.ogv"
+file = "res://video/Sequence-01_1.ogv"
 
 [node name="Cutscene" type="Node2D"]
 script = ExtResource("1_agf0x")

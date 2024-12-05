@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cr7oqsi6kn80o"]
+[gd_scene load_steps=19 format=3 uid="uid://cr7oqsi6kn80o"]
 
 [ext_resource type="Script" path="res://titlescreen/title_screen.gd" id="1_o5jyc"]
 [ext_resource type="Texture2D" uid="uid://ccnptkb1s7tlv" path="res://art/titlescreen/Start button ganti font.png" id="2_fggmy"]
@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dt1ldyuwlf0ty" path="res://art/titlescreen/title screen.png" id="6_n1ll6"]
 [ext_resource type="Texture2D" uid="uid://dcpja6qu1scp6" path="res://art/titlescreen/Logo Perusahaan@4x.png" id="7_k75t0"]
 [ext_resource type="PackedScene" uid="uid://c6t7smfxnhx7n" path="res://titlescreen/settings_menu.tscn" id="7_n5oyb"]
-[ext_resource type="AudioStream" uid="uid://0w5kt5mfsttf" path="res://music/splash.mp3" id="9_2cbcg"]
+[ext_resource type="AudioStream" uid="uid://bhdjotcdm26vh" path="res://music/splash_final.mp3" id="9_av6h4"]
+[ext_resource type="AudioStream" uid="uid://dhdom2tyn2dsp" path="res://music/menu_loop_final.mp3" id="10_6ilp1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0dwa"]
 atlas = ExtResource("6_n1ll6")
@@ -213,8 +214,9 @@ offset_right = 970.0
 offset_bottom = 553.0
 
 [node name="Splash" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("9_2cbcg")
+stream = ExtResource("9_av6h4")
 
 [node name="TitleScreen" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_6ilp1")
 
 [connection signal="backTo" from="CanvasLayer/SettingsMenu" to="." method="_on_settings_menu_back_to"]

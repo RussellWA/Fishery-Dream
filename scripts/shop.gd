@@ -104,3 +104,16 @@ func _on_player_unlock_fish(fish):
 			seed["isLocked"] = false
 			setShopItems()
 			return
+
+func _on_pause_button_disable(isDisable):
+	var grid_container = $NinePatchRect/GridContainer
+	for child in grid_container.get_children():
+		if child is Button:
+			child.disabled = isDisable
+
+func _on_pause_menu_disable(isDisable):
+	var disable: bool = isDisable
+	var grid_container = $NinePatchRect/GridContainer
+	for child in grid_container.get_children():
+		if child is Button:
+			child.disabled = isDisable

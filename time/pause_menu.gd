@@ -1,5 +1,7 @@
 extends Control
 
+signal disable(isDisable: bool)
+
 @onready var continue_btn: Button = $ContinueBtn
 @onready var exit_btn: Button = $ExitBtn
 @onready var settings_btn: Button = $SettingsBtn
@@ -17,6 +19,7 @@ func _continue_button_pressed():
 	shop_btn.disabled = false
 	$".".visible = false
 	$"../PauseButton".disabled = false
+	disable.emit(false)
 
 func _settings_button_pressed():
 	$".".visible = false

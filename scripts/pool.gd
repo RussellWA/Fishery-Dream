@@ -38,7 +38,7 @@ func _ready():
 	get_parent().sendDay.connect(_on_world_send_day)
 
 func _open_ui():
-	if(curr_fish != "empty" and end_day <= curr_day):
+	if(curr_fish != "empty" and end_day <= curr_day and heldItem == null):
 		var item_data = items.filter(func(item): return item["name"].to_lower() == curr_fish)
 		var hotbar_item = item_data[0]
 		if hotbar_item:
@@ -52,7 +52,7 @@ func _open_ui():
 			exclam_anim.stop()
 			board2.visible = false
 			play_anim()
-	elif(curr_fish != "empty" and curr_day != end_day):
+	elif(curr_fish != "empty" and curr_day != end_day and heldItem == null):
 		print("not yet")
 		if isOpen:
 			print("close")
