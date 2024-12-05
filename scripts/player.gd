@@ -108,25 +108,23 @@ func check_progress(fish: String, amount: int):
 		return
 	elif tilapia_progress > 0 and fish == "tilapia":
 		tilapia_progress -= amount
-		if tilapia_progress <= 0: unlock_fish.emit("Tilapia")
+		if tilapia_progress <= 0: unlock_fish.emit("Gourami")
 		return
 	elif gourami_progress > 0 and fish == "gourami":
 		gourami_progress -= amount
-		if gourami_progress <= 0: unlock_fish.emit("Gourami")
+		if gourami_progress <= 0: unlock_fish.emit("Pomfret")
 		return
 	elif pomfret_progress > 0 and fish == "pomfret":
 		pomfret_progress -= amount
-		if pomfret_progress <= 0: unlock_fish.emit("Pomfret")
+		if pomfret_progress <= 0: unlock_fish.emit("SnakeHead")
 		return
 	elif snakeHead_progress > 0 and fish == "snakehead":
 		snakeHead_progress -= amount
-		if snakeHead_progress <= 0: unlock_fish.emit("SnakeHead")
+		if snakeHead_progress <= 0: unlock_fish.emit("SilverCatfish")
 		return
 	elif silverCatfish_progress > 0 and fish == "silvercatfish":
 		silverCatfish_progress -= amount
-		if silverCatfish_progress <= 0: unlock_fish.emit("SilverCatfish")
+		if silverCatfish_progress <= 0: unlock_fish.emit("Belida")
 		return
 	elif belida_progress > 0 and fish == "belida":
 		belida_progress -= amount
-		if catfish_progress <= 0: unlock_fish.emit("Belida")
-		return
