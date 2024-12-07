@@ -11,7 +11,7 @@ var snakeHead_progress: int = 5
 var silverCatfish_progress: int = 6
 var belida_progress: int = 7
 
-@onready var money_label: Label = $"../CanvasLayer/Money"
+@onready var money_label: Label = $"../CanvasLayer/OverlayLayer/Money"
 @onready var interaction_area: InteractionArea = $InteractionArea
 
 const speed = 100

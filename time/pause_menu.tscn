@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://coeke6xfw006r"]
 
 [ext_resource type="Script" path="res://time/pause_menu.gd" id="1_xdiwi"]
-[ext_resource type="Texture2D" uid="uid://damfshlkw1snm" path="res://art/titlescreen/Setting button ganti font.png" id="2_iwfmm"]
-[ext_resource type="Texture2D" uid="uid://dpqujwf8bmd2e" path="res://art/hud/Exit button ganti font.png" id="3_n46xy"]
+[ext_resource type="Texture2D" uid="uid://cphssrbwvu60f" path="res://art/hud/Setting_button_3_ruas.png" id="2_s152f"]
+[ext_resource type="Texture2D" uid="uid://dfd21ip3gcogc" path="res://art/hud/Exit_Button_Pause.png" id="3_n6g65"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d4jcf"]
 load_path = "res://.godot/imported/Continue Button.png-d67a286066e62ba9876a45312cd37129.ctex"
@@ -18,6 +18,7 @@ offset_bottom = -96.1201
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xdiwi")
+metadata/_edit_vertical_guides_ = [960.0, 1050.0]
 
 [node name="ContinueBtn" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
@@ -36,15 +37,14 @@ metadata/_edit_lock_ = true
 self_modulate = Color(1, 1, 1, 0)
 z_index = 1
 layout_mode = 0
-offset_left = -1.0
-offset_top = 15.0
+offset_top = 19.0001
 offset_right = 89.0
-offset_bottom = 46.0
+offset_bottom = 46.0001
 
 [node name="Sprite2D" type="Sprite2D" parent="SettingsBtn"]
-position = Vector2(45, 16)
-scale = Vector2(1.58621, 1.45455)
-texture = ExtResource("2_iwfmm")
+position = Vector2(45, 13.4295)
+scale = Vector2(1, 0.916274)
+texture = ExtResource("2_s152f")
 metadata/_edit_lock_ = true
 
 [node name="ExitBtn" type="Button" parent="."]
@@ -53,20 +53,21 @@ z_index = 1
 layout_mode = 0
 offset_top = 64.0
 offset_right = 90.0
-offset_bottom = 95.0
+offset_bottom = 91.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ExitBtn"]
-position = Vector2(44.9999, 15.5)
-scale = Vector2(1.55172, 1.40909)
-texture = ExtResource("3_n46xy")
+position = Vector2(45, 14)
+scale = Vector2(1, 0.838709)
+texture = ExtResource("3_n6g65")
 metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(1, 1, 1, 0.556863)
 layout_mode = 0
-offset_left = -1020.0
-offset_top = -540.0
-offset_right = 1068.0
-offset_bottom = 619.0
+offset_left = -987.0
+offset_top = -538.0
+offset_right = 1101.0
+offset_bottom = 621.0
 mouse_filter = 2
+metadata/_edit_lock_ = true

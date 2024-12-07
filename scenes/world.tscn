@@ -603,6 +603,14 @@ position = Vector2(11, 10)
 scale = Vector2(0.8125, 0.8125)
 texture = ExtResource("5_0u203")
 
+[node name="Money" type="Label" parent="CanvasLayer/OverlayLayer"]
+offset_left = 21.0
+offset_top = 5.0
+offset_right = 61.0
+offset_bottom = 28.0
+label_settings = SubResource("LabelSettings_hltyq")
+metadata/_edit_use_anchors_ = true
+
 [node name="TransitionScene" parent="CanvasLayer" instance=ExtResource("8_encvb")]
 layer = 2
 
@@ -616,14 +624,6 @@ offset_left = -30.08
 offset_top = -58.04
 offset_right = 30.92
 offset_bottom = 8.95996
-
-[node name="Money" type="Label" parent="CanvasLayer"]
-offset_left = 21.0
-offset_top = 5.0
-offset_right = 61.0
-offset_bottom = 28.0
-label_settings = SubResource("LabelSettings_hltyq")
-metadata/_edit_use_anchors_ = true
 
 [node name="HotbarGui" parent="CanvasLayer" instance=ExtResource("6_8n3iq")]
 offset_left = -91.0
@@ -730,6 +730,7 @@ volume_db = -10.0
 [connection signal="fade" from="." to="CanvasLayer/TransitionScene" method="_on_world_fade"]
 [connection signal="first" from="." to="CanvasLayer/day_night" method="_on_world_first"]
 [connection signal="morning" from="." to="CanvasLayer/day_night" method="_on_world_morning"]
+[connection signal="movePlayer" from="." to="player" method="_on_world_move_player"]
 [connection signal="sendDay" from="." to="Pool" method="_on_world_send_day"]
 [connection signal="sendDay" from="." to="Pool2" method="_on_world_send_day"]
 [connection signal="unlock_fish" from="player" to="CanvasLayer/Shop" method="_on_player_unlock_fish"]

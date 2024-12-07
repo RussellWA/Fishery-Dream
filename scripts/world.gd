@@ -6,6 +6,7 @@ signal sendDay(time: int)
 signal changeDay(day: int, hour: int, minute: int)
 signal morning()
 signal first()
+signal movePlayer(position: Vector2)
 
 # Canvas Layers
 @onready var trans_scene: CanvasLayer = $CanvasLayer/TransitionScene
@@ -22,6 +23,7 @@ signal first()
 var has_transitioned: bool = false
 var first_cycle: bool = true
 var previous_day: int = -1
+var house_location: Vector2
 
 func _ready():
 	if first_cycle:
@@ -29,6 +31,7 @@ func _ready():
 		first.emit()
 		day_music.play()
 	update_time_label()
+	$player.global_position = $house.global_position + Vector2(0, 60)
 	
 func _process(delta: float) -> void:
 	update_time_label()
@@ -61,7 +64,6 @@ func update_time_label() -> void:
 	curr_day = time_system.date_time.days
 
 func transition() -> void:
-	print("change day")
 	morning.emit()
 	time_system.toggle_time_pause()
 	get_tree().paused = true
@@ -69,6 +71,7 @@ func transition() -> void:
 
 func _on_transition_scene_fade_completed(isBlack):
 	if isBlack:
+		$player.global_position = $house.global_position + Vector2(0, 60)
 		$CanvasLayer/CanvasLayer.visible = true
 		time_system.date_time.days += 1
 		time_system.date_time.hours = 6
