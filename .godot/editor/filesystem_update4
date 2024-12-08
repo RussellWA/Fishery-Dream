@@ -1,11 +1,9 @@
 res://scenes/world.tscn
 res://hotbar/player_hotbar.tres
 res://font/clock_label_settings.tres
-res://scripts/world.gd
-res://scripts/house.gd
-res://scripts/player.gd
 res://titlescreen/title_screen.tscn
 res://titlescreen/settings_menu.tscn
 res://time/pause_menu.tscn
 res://scenes/cutscene.tscn
 res://scenes/shop.tscn
+res://scenes/house.tscn
