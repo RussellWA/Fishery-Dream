@@ -8,6 +8,7 @@ signal morning()
 signal first()
 signal playerLookDown()
 signal doneLoading()
+signal lightOn(isOn: bool)
 
 # Canvas Layers
 @onready var trans_scene: CanvasLayer = $CanvasLayer/TransitionScene
@@ -49,8 +50,10 @@ func _process(delta: float) -> void:
 		day_music.stop()
 		night_music.play()
 		cycle.emit(true)
+		lightOn.emit(true)
 	
 	if time_system.date_time.hours == 7 and time_system.date_time.minutes == 30 and not has_transitioned:
+		lightOn.emit(false)
 		cycle.emit(false)
 
 func update_time_label() -> void:
@@ -80,6 +83,7 @@ func _on_transition_scene_fade_completed(isBlack):
 			previous_day = curr_day
 		changeDay.emit(day, 6, 0)
 		$player.global_position = $house.global_position + Vector2(0, 20)
+		lightOn.emit(true)
 		playerLookDown.emit()
 		doneLoading.emit()
 		night_music.stop()

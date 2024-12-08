@@ -1146,29 +1146,14 @@ volume_db = -10.0
 position = Vector2(536, 104)
 shape = SubResource("RectangleShape2D_7f1sg")
 
-[node name="Lamp3" parent="." instance=ExtResource("31_yqjxy")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(300, 123)
-
-[node name="Lamp2" parent="." instance=ExtResource("31_yqjxy")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(551, 123)
-
 [node name="Lamp" parent="." instance=ExtResource("31_yqjxy")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(175, 125)
+position = Vector2(351, 164)
 
 [connection signal="changeDay" from="." to="CanvasLayer/OverlayLayer/TimeGui" method="_on_world_change_day"]
 [connection signal="cycle" from="." to="CanvasLayer/day_night" method="_on_world_cycle"]
 [connection signal="doneLoading" from="." to="." method="_on_done_loading"]
 [connection signal="fade" from="." to="CanvasLayer/TransitionScene" method="_on_world_fade"]
 [connection signal="first" from="." to="CanvasLayer/day_night" method="_on_world_first"]
-[connection signal="lightOn" from="." to="Lamp3" method="_on_world_light_on"]
-[connection signal="lightOn" from="." to="Lamp2" method="_on_world_light_on"]
-[connection signal="lightOn" from="." to="Lamp" method="_on_world_light_on"]
 [connection signal="morning" from="." to="CanvasLayer/day_night" method="_on_world_morning"]
 [connection signal="playerLookDown" from="." to="player" method="_on_world_player_look_down"]
 [connection signal="sendDay" from="." to="Pool" method="_on_world_send_day"]

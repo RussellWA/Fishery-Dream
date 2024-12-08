@@ -1,5 +1,6 @@
-Sprite2D
 CollisionShape2D
+PointLight2D
+Sprite2D
 StaticBody2D
 AudioStreamPlayer2D
 HSlider
@@ -11,4 +12,3 @@ CanvasLayer
 AnimationPlayer
 VideoStreamPlayer
 LightOccluder2D
-PointLight2D

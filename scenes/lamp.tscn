@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://1qrefgdj4h73"]
+
+[ext_resource type="Script" path="res://scripts/lamp.gd" id="1_xdasg"]
+[ext_resource type="Texture2D" uid="uid://73sqx8jk07bk" path="res://art/objects/lamp post.png" id="1_xl8o7"]
+
+[sub_resource type="Gradient" id="Gradient_xqqu5"]
+offsets = PackedFloat32Array(0, 0.693617)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7ave8"]
+gradient = SubResource("Gradient_xqqu5")
+fill = 1
+fill_from = Vector2(0.491453, 0.487179)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0l0k"]
+size = Vector2(12, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_le2c2"]
+size = Vector2(10, 2)
+
+[node name="Lamp" type="StaticBody2D"]
+script = ExtResource("1_xdasg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xl8o7")
+offset = Vector2(0, -29)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -22)
+scale = Vector2(1.8, 1.8)
+color = Color(0.827451, 0.462745, 0, 1)
+texture = SubResource("GradientTexture2D_7ave8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w0l0k")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_le2c2")
+metadata/_edit_lock_ = true
