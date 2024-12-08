@@ -6,7 +6,8 @@ signal sendDay(time: int)
 signal changeDay(day: int, hour: int, minute: int)
 signal morning()
 signal first()
-signal movePlayer(position: Vector2)
+signal playerLookDown()
+signal doneLoading()
 
 # Canvas Layers
 @onready var trans_scene: CanvasLayer = $CanvasLayer/TransitionScene
@@ -24,6 +25,7 @@ var has_transitioned: bool = false
 var first_cycle: bool = true
 var previous_day: int = -1
 var house_location: Vector2
+var isLoading: bool = false
 
 func _ready():
 	if first_cycle:
@@ -31,7 +33,7 @@ func _ready():
 		first.emit()
 		day_music.play()
 	update_time_label()
-	$player.global_position = $house.global_position + Vector2(0, 60)
+	$player.global_position = $house.global_position + Vector2(0, 10)
 	
 func _process(delta: float) -> void:
 	update_time_label()
@@ -42,9 +44,6 @@ func _process(delta: float) -> void:
 	if time_system.date_time.hours == 23 and time_system.date_time.minutes == 59 and not has_transitioned:
 		transition()
 		has_transitioned = true
-	
-	#if time_system.date_time.hours == 10 and time_system.date_time.minutes == 0 and not has_transitioned:
-		#fade_out(day_music)
 	
 	if time_system.date_time.hours == 18 and time_system.date_time.minutes == 0 and not has_transitioned:
 		day_music.stop()
@@ -71,7 +70,6 @@ func transition() -> void:
 
 func _on_transition_scene_fade_completed(isBlack):
 	if isBlack:
-		$player.global_position = $house.global_position + Vector2(0, 60)
 		$CanvasLayer/CanvasLayer.visible = true
 		time_system.date_time.days += 1
 		time_system.date_time.hours = 6
@@ -81,7 +79,9 @@ func _on_transition_scene_fade_completed(isBlack):
 			sendDay.emit(curr_day) 
 			previous_day = curr_day
 		changeDay.emit(day, 6, 0)
-		fade.emit(false)
+		$player.global_position = $house.global_position + Vector2(0, 20)
+		playerLookDown.emit()
+		doneLoading.emit()
 		night_music.stop()
 		day_music.play()
 	else:
@@ -94,11 +94,6 @@ func _on_transition_scene_fade_completed(isBlack):
 func _on_house_sleep():
 	transition()
 
-#func fade_out(stream_player):
-	#print("player: ", stream_player)
-	#fade_out_music.tween_property(stream_player, "volume_db", linear_to_db(1.0), 1.0).from(linear_to_db(0.1))
-	#fade_out_music.play()
-#
-#func _on_Tween_tween_completed(object, key):
-	#object.stop()
-	#object.volume_db = 0 # reset volume
+func _on_done_loading():
+	print("done")
+	fade.emit(false)

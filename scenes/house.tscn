@@ -14,8 +14,8 @@ size = Vector2(78, 26)
 script = ExtResource("1_8pm8a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -35)
 texture = ExtResource("2_wlljj")
+offset = Vector2(0, -35)
 
 [node name="InteractionArea2" parent="." instance=ExtResource("3_xtxi5")]
 action_name = "toggle"

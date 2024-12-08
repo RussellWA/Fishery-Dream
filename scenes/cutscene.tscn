@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7uk7f3hfiblq"]
+[gd_scene load_steps=5 format=3 uid="uid://c7uk7f3hfiblq"]
 
 [ext_resource type="Script" path="res://scripts/cutscene.gd" id="1_agf0x"]
+[ext_resource type="FontFile" uid="uid://dxsll83ym51lk" path="res://font/GrapeSoda.ttf" id="2_ty31m"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_2urt3"]
 file = "res://video/Sequence-01_1.ogv"
+
+[sub_resource type="LabelSettings" id="LabelSettings_hbgk4"]
+font = ExtResource("2_ty31m")
 
 [node name="Cutscene" type="Node2D"]
 script = ExtResource("1_agf0x")
@@ -29,6 +33,7 @@ anchor_bottom = 1.0
 offset_top = -23.0
 offset_right = 56.0
 grow_vertical = 0
+label_settings = SubResource("LabelSettings_hbgk4")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 visible = false

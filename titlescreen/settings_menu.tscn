@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6t7smfxnhx7n"]
+[gd_scene load_steps=5 format=3 uid="uid://c6t7smfxnhx7n"]
 
 [ext_resource type="Script" path="res://titlescreen/settings_menu.gd" id="1_ws3rg"]
 [ext_resource type="Texture2D" uid="uid://b62n2iiso0pfn" path="res://art/hud/Back button ganti font.png" id="2_pyv4k"]
+[ext_resource type="Texture2D" uid="uid://voteaglmgnd6" path="res://art/hud/Volume Sign.png" id="3_b0n1b"]
 
 [sub_resource type="Theme" id="Theme_whfh1"]
 
@@ -48,3 +49,7 @@ offset_top = 21.0
 offset_right = 53.0
 offset_bottom = 37.0
 theme = SubResource("Theme_whfh1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9)
+texture = ExtResource("3_b0n1b")

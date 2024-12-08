@@ -15,7 +15,7 @@ var belida_progress: int = 7
 @onready var interaction_area: InteractionArea = $InteractionArea
 
 const speed = 100
-var curr_direction = "none"
+var curr_direction = "down"
 
 var money: int = 10
 
@@ -128,3 +128,8 @@ func check_progress(fish: String, amount: int):
 		return
 	elif belida_progress > 0 and fish == "belida":
 		belida_progress -= amount
+
+func _on_world_player_look_down():
+	curr_direction = "down"
+	play_anim(0)
+	
