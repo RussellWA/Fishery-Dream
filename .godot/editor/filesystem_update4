@@ -7,6 +7,4 @@ res://time/pause_menu.tscn
 res://scenes/cutscene.tscn
 res://scenes/shop.tscn
 res://scenes/house.tscn
-res://scripts/world.gd
 res://scenes/player.tscn
-res://scripts/player.gd
