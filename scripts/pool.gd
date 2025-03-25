@@ -36,6 +36,8 @@ func _ready():
 	click_area.input_event.connect(_on_click_area_input_event)
 	interaction_area.interact = Callable(self, "_open_ui")
 	get_parent().sendDay.connect(_on_world_send_day)
+	hotbar.heldRemove.connect(removeHeld)
+	
 
 func _open_ui():
 	if(curr_fish != "empty" and end_day <= curr_day and heldItem == null):
@@ -63,6 +65,8 @@ func _open_ui():
 			board.visible = true
 			isOpen = true
 	else:
+		print(heldItem)
+		print(heldItem == null)
 		print("empty")
 		
 func play_anim():
@@ -73,6 +77,7 @@ func play_anim():
 		anim.play("fish")
 
 func _on_hotbar_gui_update_held_item(item: ItemGui):
+	print("hotbar gui ", heldItem)
 	if item:
 		heldItem = item
 	else:
@@ -92,10 +97,11 @@ func _on_click_area_input_event(viewport: Object, event: InputEvent, shape_idx: 
 					play_anim()
 				
 func _on_world_send_day(time):
+	print("Pool state:", self.name, "Curr fish:", curr_fish, "Curr day:", curr_day, "End day:", end_day)
 	if curr_day != time:
 		curr_day = time
 	board.visible = false
-	if(curr_fish != "empty" and end_day <= curr_day):
+	if curr_fish != "empty" and curr_day >= end_day:
 		exclam_anim.play("default")
 		board2.visible = true
 	else:
@@ -107,3 +113,6 @@ func _on_interaction_area_area_enter(isTrue):
 
 func _on_click_area_mouse_entered():
 	print("Mouse entered detected")
+
+func removeHeld():
+	heldItem = null

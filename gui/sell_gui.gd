@@ -42,6 +42,7 @@ func insert_item_to_slot(slot):
 	player.add_money(fish_data[0]["price"] * 1.5 * int(item.amountLabel.text))
 	player.check_progress(fish_data[0]["name"].to_lower(), int(item.amountLabel.text))
 	item_sold.emit(fish_data[0]["name"].to_lower())
+	heldItem = null
 
 func _on_hotbar_gui_sell_held_item(slot, item):
 	heldItem = item

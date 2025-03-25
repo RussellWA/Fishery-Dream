@@ -3,6 +3,7 @@ extends Resource
 class_name Hotbar
 
 signal updated
+signal heldRemove
 
 @export var slots: Array[HotbarSlot]
 @export var hotbar_path: String = "res://hotbar/player_hotbar.tres"
@@ -57,6 +58,7 @@ func reduceAmount(item: HotbarItem):
 func removeItemAtIndex(index: int):
 	print("removing")
 	slots[index] = HotbarSlot.new()
+	heldRemove.emit()
 
 func insertSlot(index: int, hotbarSlot: HotbarSlot):
 	var oldIndex: int = slots.find(hotbarSlot)
